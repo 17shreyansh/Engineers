@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, Factory, Snowflake, CheckCircle, Target, Layers, Box } from 'lucide-react';
+import { ArrowRight, Factory, Snowflake, CheckCircle, Target, Layers, Box, Quote } from 'lucide-react';
 import SectionWrapper from '../components/sections/SectionWrapper';
 import SectionHeader from '../components/sections/SectionHeader';
 import CategoryCard from '../components/ui/CategoryCard';
@@ -112,6 +112,109 @@ export default function Home() {
               />
             ))}
           </div>
+        </div>
+      </SectionWrapper>
+
+      {/* Team Section - CEO */}
+      <SectionWrapper>
+        <div className="container">
+          <SectionHeader
+            subtitle="Leadership"
+            title="Meet Our CEO"
+            description="Driving innovation and excellence in industrial refrigeration"
+            align="center"
+          />
+          <motion.div 
+            className="ceo-section"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="ceo-card">
+              <div className="ceo-image-wrapper">
+                <div className="ceo-image-placeholder">
+                  <div className="ceo-initials">SK</div>
+                </div>
+                <div className="ceo-badge">CEO & Founder</div>
+              </div>
+              <div className="ceo-content">
+                <div className="ceo-quote-icon">
+                  <Quote size={40} />
+                </div>
+                <blockquote className="ceo-quote">
+                  "For over four decades, we've been committed to delivering world-class refrigeration solutions that power India's cold chain infrastructure. Our success is built on engineering excellence, customer trust, and an unwavering commitment to quality."
+                </blockquote>
+                <div className="ceo-info">
+                  <h3 className="ceo-name">Surinder Kumar Singh</h3>
+                  <p className="ceo-title">Chief Executive Officer</p>
+                  <div className="ceo-credentials">
+                    <span className="credential-item">45+ Years Experience</span>
+                    <span className="credential-divider">•</span>
+                    <span className="credential-item">B.Tech (Mechanical)</span>
+                    <span className="credential-divider">•</span>
+                    <span className="credential-item">Industry Pioneer</span>
+                  </div>
+                </div>
+                <div className="ceo-achievements">
+                  <div className="achievement-item">
+                    <div className="achievement-number">1000+</div>
+                    <div className="achievement-label">Projects Led</div>
+                  </div>
+                  <div className="achievement-item">
+                    <div className="achievement-number">45+</div>
+                    <div className="achievement-label">Years Leadership</div>
+                  </div>
+                  <div className="achievement-item">
+                    <div className="achievement-number">500+</div>
+                    <div className="achievement-label">Happy Clients</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+          
+          {/* Team Members */}
+          <motion.div 
+            className="team-grid"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <div className="team-member-card">
+              <div className="team-member-image">
+                <div className="team-initials">RK</div>
+              </div>
+              <h4 className="team-member-name">Rajesh Kumar</h4>
+              <p className="team-member-role">Chief Technical Officer</p>
+              <p className="team-member-desc">30+ years in refrigeration systems design and implementation</p>
+            </div>
+            <div className="team-member-card">
+              <div className="team-member-image">
+                <div className="team-initials">AS</div>
+              </div>
+              <h4 className="team-member-name">Amit Sharma</h4>
+              <p className="team-member-role">Operations Director</p>
+              <p className="team-member-desc">Expert in project management and cold storage solutions</p>
+            </div>
+            <div className="team-member-card">
+              <div className="team-member-image">
+                <div className="team-initials">PV</div>
+              </div>
+              <h4 className="team-member-name">Priya Verma</h4>
+              <p className="team-member-role">Head of Engineering</p>
+              <p className="team-member-desc">Specialist in thermal insulation and automation systems</p>
+            </div>
+            <div className="team-member-card">
+              <div className="team-member-image">
+                <div className="team-initials">VG</div>
+              </div>
+              <h4 className="team-member-name">Vikram Gupta</h4>
+              <p className="team-member-role">Business Development</p>
+              <p className="team-member-desc">Building partnerships and expanding cold chain solutions</p>
+            </div>
+          </motion.div>
         </div>
       </SectionWrapper>
 
