@@ -102,7 +102,7 @@ export default function LayoutShell({ children }) {
               </nav>
 
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <Link to="/contact" className="btn-primary">
+                <Link to="/contact" className="btn-primary" style={{ display: mobileMenuOpen ? 'none' : 'inline-block' }}>
                   Get Quote
                 </Link>
                 <button 
@@ -117,6 +117,61 @@ export default function LayoutShell({ children }) {
           </div>
         </div>
       </header>
+
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            className="mobile-nav"
+            initial={{ x: '100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '100%' }}
+            transition={{ type: 'tween', duration: 0.3 }}
+          >
+            <div className="mobile-nav-header">
+              <div className="logo-text">
+                <div className="logo-title">SR&E</div>
+                <div className="logo-subtitle">Menu</div>
+              </div>
+              <button onClick={() => setMobileMenuOpen(false)} style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
+                <X size={32} />
+              </button>
+            </div>
+            
+            <div className="mobile-nav-links">
+              <Link to="/" className={isActive('/') ? 'mobile-nav-link active' : 'mobile-nav-link'} onClick={() => setMobileMenuOpen(false)}>
+                Home
+              </Link>
+              <Link to="/about" className={isActive('/about') ? 'mobile-nav-link active' : 'mobile-nav-link'} onClick={() => setMobileMenuOpen(false)}>
+                About Us
+              </Link>
+              
+              <div className="mobile-nav-section">
+                <h4>Products</h4>
+                <Link to="/products" className="mobile-nav-sublink" onClick={() => setMobileMenuOpen(false)}>
+                  All Products
+                </Link>
+                <Link to="/products/insulation" className="mobile-nav-sublink" onClick={() => setMobileMenuOpen(false)}>
+                  Insulation Products
+                </Link>
+                <Link to="/products/machinery" className="mobile-nav-sublink" onClick={() => setMobileMenuOpen(false)}>
+                  Machinery & Systems
+                </Link>
+              </div>
+              
+              <Link to="/services" className={isActive('/services') ? 'mobile-nav-link active' : 'mobile-nav-link'} onClick={() => setMobileMenuOpen(false)}>
+                Services
+              </Link>
+              <Link to="/contact" className={isActive('/contact') ? 'mobile-nav-link active' : 'mobile-nav-link'} onClick={() => setMobileMenuOpen(false)}>
+                Contact
+              </Link>
+              
+              <Link to="/contact" className="btn-primary" style={{ marginTop: '2rem', textAlign: 'center' }} onClick={() => setMobileMenuOpen(false)}>
+                Get Quote
+              </Link>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <main className="main-content">
         {children}
