@@ -1,0 +1,183 @@
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { ArrowRight, Factory, Snowflake, CheckCircle, Target, Layers, Box } from 'lucide-react';
+import SectionWrapper from '../components/sections/SectionWrapper';
+import SectionHeader from '../components/sections/SectionHeader';
+import CategoryCard from '../components/ui/CategoryCard';
+import { productCategories, products } from '../data/products';
+
+export default function Home() {
+  return (
+    <div className="home-page">
+      {/* Hero Section */}
+      <section className="hero-section">
+        <div className="hero-overlay"></div>
+        <div className="container">
+          <motion.div 
+            className="hero-content"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <motion.div 
+              className="hero-badge"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2 }}
+            >
+              Since 1978
+            </motion.div>
+            <h1 className="hero-title">
+              Industrial Refrigeration<br />
+              <span className="hero-title-accent">Engineered for Excellence</span>
+            </h1>
+            <p className="hero-description">
+              Complete cold storage solutions, industrial refrigeration systems, and thermal insulation products. 
+              Trusted by industries across India for over 45 years.
+            </p>
+            <div className="hero-actions">
+              <Link to="/products" className="btn-hero-primary">
+                Explore Products
+              </Link>
+              <Link to="/contact" className="btn-hero-secondary">
+                Get Consultation
+              </Link>
+            </div>
+            <motion.div 
+              className="hero-stats"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6 }}
+            >
+              <div className="hero-stat">
+                <div className="hero-stat-value">45+</div>
+                <div className="hero-stat-label">Years Experience</div>
+              </div>
+              <div className="hero-stat">
+                <div className="hero-stat-value">1000+</div>
+                <div className="hero-stat-label">Projects Delivered</div>
+              </div>
+              <div className="hero-stat">
+                <div className="hero-stat-value">100%</div>
+                <div className="hero-stat-label">Client Satisfaction</div>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Trust Section */}
+      <SectionWrapper variant="elevated">
+        <div className="container">
+          <div className="trust-grid">
+            <motion.div className="trust-item" whileHover={{ y: -8 }} transition={{ duration: 0.3 }}>
+              <Factory className="trust-icon" size={48} />
+              <h3>Industrial Grade</h3>
+              <p>Heavy-duty equipment built for continuous industrial operations</p>
+            </motion.div>
+            <motion.div className="trust-item" whileHover={{ y: -8 }} transition={{ duration: 0.3 }}>
+              <Layers className="trust-icon" size={48} />
+              <h3>Complete Solutions</h3>
+              <p>From design to installation, maintenance to automation</p>
+            </motion.div>
+            <motion.div className="trust-item" whileHover={{ y: -8 }} transition={{ duration: 0.3 }}>
+              <CheckCircle className="trust-icon" size={48} />
+              <h3>Proven Reliability</h3>
+              <p>45+ years of engineering excellence and customer trust</p>
+            </motion.div>
+            <motion.div className="trust-item" whileHover={{ y: -8 }} transition={{ duration: 0.3 }}>
+              <Target className="trust-icon" size={48} />
+              <h3>One-Stop Provider</h3>
+              <p>Complete product range for all cold industry requirements</p>
+            </motion.div>
+          </div>
+        </div>
+      </SectionWrapper>
+
+      {/* Product Categories */}
+      <SectionWrapper>
+        <div className="container">
+          <SectionHeader
+            subtitle="Our Products"
+            title="Industrial Cold Solutions"
+            description="Comprehensive range of insulation materials and refrigeration machinery for industrial applications"
+            align="center"
+          />
+          <div className="category-grid">
+            {productCategories.map(category => (
+              <CategoryCard
+                key={category.id}
+                category={category}
+                productCount={products[category.slug].length}
+              />
+            ))}
+          </div>
+        </div>
+      </SectionWrapper>
+
+      {/* Services Section */}
+      <SectionWrapper variant="dark">
+        <div className="container">
+          <SectionHeader
+            subtitle="What We Do"
+            title="Engineering Services"
+            description="End-to-end solutions for industrial refrigeration and cold storage infrastructure"
+            align="center"
+          />
+          <div className="services-grid">
+            <div className="service-card">
+              <div className="service-number">01</div>
+              <h3>Cold Storage Design</h3>
+              <p>Custom-engineered cold storage facilities designed for optimal efficiency and capacity</p>
+            </div>
+            <div className="service-card">
+              <div className="service-number">02</div>
+              <h3>System Installation</h3>
+              <p>Professional installation of refrigeration systems, insulation, and automation equipment</p>
+            </div>
+            <div className="service-card">
+              <div className="service-number">03</div>
+              <h3>Insulation Works</h3>
+              <p>Complete thermal insulation solutions for cold rooms, warehouses, and industrial facilities</p>
+            </div>
+            <div className="service-card">
+              <div className="service-number">04</div>
+              <h3>Automation Integration</h3>
+              <p>PLC-based automation systems for temperature control, monitoring, and energy management</p>
+            </div>
+            <div className="service-card">
+              <div className="service-number">05</div>
+              <h3>Maintenance & Support</h3>
+              <p>Preventive maintenance, emergency repairs, and technical support services</p>
+            </div>
+            <div className="service-card">
+              <div className="service-number">06</div>
+              <h3>Turnkey Projects</h3>
+              <p>Complete project execution from concept to commissioning for cold chain infrastructure</p>
+            </div>
+          </div>
+          <div className="services-cta">
+            <Link to="/services" className="btn-services">
+              View All Services →
+            </Link>
+          </div>
+        </div>
+      </SectionWrapper>
+
+      {/* CTA Section */}
+      <SectionWrapper variant="accent">
+        <div className="container">
+          <div className="cta-content">
+            <div className="cta-text">
+              <h2>Ready to Build Your Cold Storage Solution?</h2>
+              <p>Talk to our engineering team for custom solutions tailored to your requirements</p>
+            </div>
+            <Link to="/contact" className="btn-cta">
+              Talk to an Engineer
+            </Link>
+          </div>
+        </div>
+      </SectionWrapper>
+    </div>
+  );
+}
