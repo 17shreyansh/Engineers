@@ -52,6 +52,24 @@ export default function Services() {
       description: 'Comprehensive thermal insulation solutions using PUF panels, fiberglass, rockwool, and specialized materials.',
       features: ['Wall insulation', 'Ceiling insulation', 'Floor insulation', 'Pipe insulation'],
     },
+    {
+      id: 9,
+      title: 'Turnkey Projects',
+      description: 'Complete end-to-end project execution from concept to commissioning, delivering fully operational cold storage facilities.',
+      features: ['Complete project management', 'Design to commissioning', 'Single point responsibility', 'Timely delivery'],
+    },
+    {
+      id: 10,
+      title: 'All Types of Industrial Refrigeration',
+      description: 'Comprehensive industrial refrigeration systems including ammonia, freon, and CO2 based solutions for all applications.',
+      features: ['Ammonia systems', 'Freon systems', 'CO2 systems', 'Custom solutions'],
+    },
+    {
+      id: 11,
+      title: 'All Types of Hot and Cold Industrial Insulation',
+      description: 'Complete range of hot and cold insulation solutions for pipes, ducts, vessels, and industrial equipment.',
+      features: ['Hot insulation', 'Cold insulation', 'Pipe insulation', 'Equipment insulation'],
+    },
   ];
 
   return (

@@ -24,9 +24,28 @@ import xpsBoards from '../assets/XPS Boards.jpeg';
 import xlpeInsulation from '../assets/XLPE INSULATION.jpeg';
 import bubbleInsulation from '../assets/Bubble Insulation.jpeg';
 import ammoniaCompressors from '../assets/Ammonia Compressors.jpeg';
-  import ammoniaCompressors2 from '../assets/Ammonia Compressors2.jpeg';
+import ammoniaCompressors2 from '../assets/Ammonia Compressors2.jpeg';
 import ammoniaValves from '../assets/Ammonia Valves.jpeg';
 import epsBoards from '../assets/EPS boards.jpeg';
+import ammoniaCondensers from '../assets/Ammonia Atmospheric Condensers.jpeg';
+import airCoolingUnit from '../assets/Ammonia Air Cooling unit.jpeg';
+import bunkerCooling from '../assets/Bunker Cooling System.jpeg';
+import ammoniaPumps from '../assets/Ammonia Liquid Pumps.jpeg';
+import lowPressureReceiver from '../assets/Low Pressure Receiver.jpeg';
+import pressureVessel from '../assets/Pressure Vessel.jpeg';
+import monoblockPump from '../assets/Monoblock pump.jpeg';
+import inductionMotors from '../assets/Induction Motors.jpeg';
+import genset from '../assets/Genset.jpeg';
+import co2Extraction from '../assets/CO2 EXTRACTION System.jpeg';
+import coldStorageAutomation from '../assets/Cold storage automation.jpeg';
+import conveyorBelt from '../assets/Conveyor Belt System.jpeg';
+import fireFighting from '../assets/Fire fighting system.jpeg';
+import airCurtains from '../assets/Air Curtains.jpeg';
+import coldStorageDoors from '../assets/Cold Storage doors.jpeg';
+import digitalThermometer from '../assets/Digital thermometer.jpeg';
+import analogueThermometer from '../assets/Analogue Thermometer.jpeg';
+import pressureGauges from '../assets/Pressure gauges.jpeg';
+import sparesParts from '../assets/Spares parts.jpeg';
 
 export const products = {
   insulation: [
@@ -44,7 +63,7 @@ export const products = {
         'Temperature Range': '-50°C to +250°C',
         'Fire Rating': 'Class A1 Non-Combustible',
       },
-      image: null,
+      image: fiberglassRolls,
     },
     {
       id: 'fiberglass-rolls',
@@ -238,7 +257,7 @@ export const products = {
         'Display': 'HMI Touchscreen',
         'Communication': 'Modbus, Ethernet',
       },
-      image: null,
+      image: ammoniaCompressors2,
     },
     {
       id: 'ammonia-condensers',
@@ -254,7 +273,7 @@ export const products = {
         'Material': 'Galvanized steel / Stainless steel',
         'Fan Type': 'Axial / Centrifugal',
       },
-      image: null,
+      image: ammoniaCondensers,
     },
     {
       id: 'air-cooling-systems',
@@ -270,7 +289,7 @@ export const products = {
         'Defrost Type': 'Electric / Hot gas',
         'Air Throw': 'Up to 30 meters',
       },
-      image: null,
+      image: airCoolingUnit,
     },
     {
       id: 'bunker-cooling',
@@ -286,7 +305,7 @@ export const products = {
         'Humidity Control': 'Integrated',
         'Temperature Range': '2°C - 15°C',
       },
-      image: null,
+      image: bunkerCooling,
     },
     {
       id: 'ammonia-pumps',
@@ -302,7 +321,7 @@ export const products = {
         'Flow Rate': '5 m³/h - 200 m³/h',
         'Head': 'Up to 100 meters',
       },
-      image: null,
+      image: ammoniaPumps,
     },
     {
       id: 'low-pressure-receivers',
@@ -318,7 +337,7 @@ export const products = {
         'Material': 'Carbon steel SA516',
         'Certification': 'ASME Section VIII',
       },
-      image: null,
+      image: lowPressureReceiver,
     },
     {
       id: 'pressure-vessels',
@@ -334,7 +353,7 @@ export const products = {
         'Volume': 'Custom designed',
         'Material': 'SA516 Gr 70',
       },
-      image: null,
+      image: pressureVessel,
     },
     {
       id: 'monoblock-pumps',
@@ -350,7 +369,7 @@ export const products = {
         'Head': 'Up to 80 meters',
         'Material': 'Cast iron / SS',
       },
-      image: null,
+      image: monoblockPump,
     },
     {
       id: 'induction-motors',
@@ -366,7 +385,7 @@ export const products = {
         'Voltage': '415V, 3-Phase',
         'Efficiency': 'IE2 / IE3',
       },
-      image: null,
+      image: inductionMotors,
     },
     {
       id: 'gensets',
@@ -382,7 +401,7 @@ export const products = {
         'Configuration': 'Open / Silent',
         'Control': 'Auto start / Manual',
       },
-      image: null,
+      image: genset,
     },
     {
       id: 'co2-extraction',
@@ -398,7 +417,7 @@ export const products = {
         'Capacity': 'Custom designed',
         'Control': 'PLC automated',
       },
-      image: null,
+      image: co2Extraction,
     },
     {
       id: 'cold-storage-automation',
@@ -414,7 +433,7 @@ export const products = {
         'Alarms': 'SMS / Email alerts',
         'Integration': 'ERP compatible',
       },
-      image: null,
+      image: coldStorageAutomation,
     },
     {
       id: 'conveyor-systems',
@@ -430,7 +449,7 @@ export const products = {
         'Speed': 'Variable',
         'Temperature': 'Down to -40°C',
       },
-      image: null,
+      image: conveyorBelt,
     },
     {
       id: 'fire-safety',
@@ -446,7 +465,7 @@ export const products = {
         'Standards': 'NFPA compliant',
         'Control': 'Addressable panel',
       },
-      image: null,
+      image: fireFighting,
     },
     {
       id: 'air-curtains',
@@ -462,7 +481,7 @@ export const products = {
         'Type': 'Ambient / Heated',
         'Mounting': 'Horizontal / Vertical',
       },
-      image: null,
+      image: airCurtains,
     },
     {
       id: 'cold-storage-doors',
@@ -478,7 +497,7 @@ export const products = {
         'Type': 'Sliding / Hinged / Strip',
         'Temperature': 'Down to -40°C',
       },
-      image: null,
+      image: coldStorageDoors,
     },
     {
       id: 'thermometers',
@@ -494,7 +513,7 @@ export const products = {
         'Accuracy': '±0.5°C',
         'Display': 'LED / LCD',
       },
-      image: null,
+      image: digitalThermometer,
     },
     {
       id: 'pressure-gauges',
@@ -510,7 +529,7 @@ export const products = {
         'Connection': 'Bottom / Back mount',
         'Material': 'SS / Brass',
       },
-      image: null,
+      image: pressureGauges,
     },
     {
       id: 'spare-parts',
@@ -526,7 +545,7 @@ export const products = {
         'Coverage': 'All equipment types',
         'Warranty': 'As per manufacturer',
       },
-      image: null,
+      image: sparesParts,
     },
   ],
 };

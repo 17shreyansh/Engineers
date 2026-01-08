@@ -268,6 +268,21 @@ export default function Home() {
               <h3>Cold Storage Insulation Work</h3>
               <p>Complete thermal insulation solutions for cold rooms, warehouses, and facilities</p>
             </div>
+            <div className="service-card">
+              <div className="service-number">09</div>
+              <h3>Turnkey Projects</h3>
+              <p>Complete end-to-end project execution from concept to commissioning</p>
+            </div>
+            <div className="service-card">
+              <div className="service-number">10</div>
+              <h3>All Types of Industrial Refrigeration</h3>
+              <p>Comprehensive industrial refrigeration systems for all applications</p>
+            </div>
+            <div className="service-card">
+              <div className="service-number">11</div>
+              <h3>Hot and Cold Industrial Insulation</h3>
+              <p>All types of hot and cold industrial insulation solutions</p>
+            </div>
           </div>
           <div className="services-cta">
             <Link to="/services" className="btn-services">
@@ -334,6 +349,30 @@ export default function Home() {
             <div className="industry-item">
               <div className="industry-number">12</div>
               <h4>Supply Chain System</h4>
+            </div>
+            <div className="industry-item">
+              <div className="industry-number">13</div>
+              <h4>Soundproofing Segment</h4>
+            </div>
+            <div className="industry-item">
+              <div className="industry-number">14</div>
+              <h4>Underdeck Insulation</h4>
+            </div>
+            <div className="industry-item">
+              <div className="industry-number">15</div>
+              <h4>Textile Industries</h4>
+            </div>
+            <div className="industry-item">
+              <div className="industry-number">16</div>
+              <h4>Automobile Industries</h4>
+            </div>
+            <div className="industry-item">
+              <div className="industry-number">17</div>
+              <h4>Refinery</h4>
+            </div>
+            <div className="industry-item">
+              <div className="industry-number">18</div>
+              <h4>Metro Station</h4>
             </div>
           </div>
         </div>
