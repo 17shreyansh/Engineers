@@ -15,6 +15,19 @@ export const productCategories = [
   },
 ];
 
+import fiberglassRolls from '../assets/Fiberglass Rolls.jpeg';
+import rockwoolInsulation from '../assets/Rockwool Insulation.jpeg';
+import pufPanel from '../assets/PUF Panel.jpeg';
+import nitrileTubes from '../assets/Nitrile Tubes.jpeg';
+import nitrileSheets from '../assets/Nitrile Sheets.jpeg';
+import xpsBoards from '../assets/XPS Boards.jpeg';
+import xlpeInsulation from '../assets/XLPE INSULATION.jpeg';
+import bubbleInsulation from '../assets/Bubble Insulation.jpeg';
+import ammoniaCompressors from '../assets/Ammonia Compressors.jpeg';
+  import ammoniaCompressors2 from '../assets/Ammonia Compressors2.jpeg';
+import ammoniaValves from '../assets/Ammonia Valves.jpeg';
+import epsBoards from '../assets/EPS boards.jpeg';
+
 export const products = {
   insulation: [
     {
@@ -31,7 +44,7 @@ export const products = {
         'Temperature Range': '-50°C to +250°C',
         'Fire Rating': 'Class A1 Non-Combustible',
       },
-      image: '/products/fiberglass-boards.jpg',
+      image: null,
     },
     {
       id: 'fiberglass-rolls',
@@ -47,7 +60,7 @@ export const products = {
         'Roll Width': '600mm - 1200mm',
         'Temperature Range': '-40°C to +200°C',
       },
-      image: '/products/fiberglass-rolls.jpg',
+      image: fiberglassRolls,
     },
     {
       id: 'rockwool-insulation',
@@ -63,7 +76,7 @@ export const products = {
         'Melting Point': '>1000°C',
         'Fire Rating': 'Euroclass A1',
       },
-      image: '/products/rockwool.jpg',
+      image: rockwoolInsulation,
     },
     {
       id: 'puf-panels',
@@ -79,7 +92,7 @@ export const products = {
         'Thermal Conductivity': '0.019 - 0.023 W/mK',
         'Panel Thickness': '50mm - 200mm',
       },
-      image: '/products/puf-panels.jpg',
+      image: pufPanel,
     },
     {
       id: 'nitrile-tubes',
@@ -95,7 +108,7 @@ export const products = {
         'Thermal Conductivity': '0.036 - 0.040 W/mK',
         'Pipe Diameter Range': '6mm - 160mm',
       },
-      image: '/products/nitrile-tubes.jpg',
+      image: nitrileTubes,
     },
     {
       id: 'nitrile-sheets',
@@ -111,7 +124,7 @@ export const products = {
         'Sheet Size': '1m x 2m standard',
         'Temperature Range': '-50°C to +110°C',
       },
-      image: '/products/nitrile-sheets.jpg',
+      image: nitrileSheets,
     },
     {
       id: 'xps-boards',
@@ -127,7 +140,7 @@ export const products = {
         'Water Absorption': '<0.7%',
         'Density': '28 - 45 kg/m³',
       },
-      image: '/products/xps-boards.jpg',
+      image: xpsBoards,
     },
     {
       id: 'xlpe-insulation',
@@ -143,7 +156,7 @@ export const products = {
         'Thermal Conductivity': '0.033 - 0.038 W/mK',
         'Temperature Range': '-70°C to +90°C',
       },
-      image: '/products/xlpe.jpg',
+      image: xlpeInsulation,
     },
     {
       id: 'bubble-insulation',
@@ -159,7 +172,23 @@ export const products = {
         'R-Value': 'R-3.7 to R-17',
         'Roll Width': '1.2m standard',
       },
-      image: '/products/bubble-insulation.jpg',
+      image: bubbleInsulation,
+    },
+    {
+      id: 'eps-boards',
+      name: 'EPS Boards',
+      slug: 'eps-boards',
+      category: 'insulation',
+      shortDescription: 'Expanded polystyrene boards for lightweight insulation',
+      description: 'Lightweight EPS insulation boards offering excellent thermal performance and cost-effectiveness for various applications.',
+      applications: ['Wall insulation', 'Roof insulation', 'Packaging', 'Lightweight construction'],
+      specifications: {
+        'Density': '15 - 30 kg/m³',
+        'Thermal Conductivity': '0.032 - 0.038 W/mK',
+        'Compressive Strength': '70 - 200 kPa',
+        'Temperature Range': '-50°C to +75°C',
+      },
+      image: epsBoards,
     },
   ],
   machinery: [
@@ -177,7 +206,7 @@ export const products = {
         'Type': 'Reciprocating / Screw',
         'Power Supply': '3-Phase, 415V',
       },
-      image: '/products/ammonia-compressor.jpg',
+      image: ammoniaCompressors,
     },
     {
       id: 'ammonia-valves',
@@ -193,7 +222,7 @@ export const products = {
         'Size Range': '15mm - 150mm',
         'Standards': 'ASME, DIN',
       },
-      image: '/products/ammonia-valves.jpg',
+      image: ammoniaValves,
     },
     {
       id: 'ammonia-controls',
@@ -209,7 +238,7 @@ export const products = {
         'Display': 'HMI Touchscreen',
         'Communication': 'Modbus, Ethernet',
       },
-      image: '/products/ammonia-controls.jpg',
+      image: null,
     },
     {
       id: 'ammonia-condensers',
@@ -225,7 +254,7 @@ export const products = {
         'Material': 'Galvanized steel / Stainless steel',
         'Fan Type': 'Axial / Centrifugal',
       },
-      image: '/products/condensers.jpg',
+      image: null,
     },
     {
       id: 'air-cooling-systems',
@@ -241,7 +270,7 @@ export const products = {
         'Defrost Type': 'Electric / Hot gas',
         'Air Throw': 'Up to 30 meters',
       },
-      image: '/products/air-cooling.jpg',
+      image: null,
     },
     {
       id: 'bunker-cooling',
@@ -257,7 +286,7 @@ export const products = {
         'Humidity Control': 'Integrated',
         'Temperature Range': '2°C - 15°C',
       },
-      image: '/products/bunker-cooling.jpg',
+      image: null,
     },
     {
       id: 'ammonia-pumps',
@@ -273,7 +302,7 @@ export const products = {
         'Flow Rate': '5 m³/h - 200 m³/h',
         'Head': 'Up to 100 meters',
       },
-      image: '/products/ammonia-pumps.jpg',
+      image: null,
     },
     {
       id: 'low-pressure-receivers',
@@ -289,7 +318,7 @@ export const products = {
         'Material': 'Carbon steel SA516',
         'Certification': 'ASME Section VIII',
       },
-      image: '/products/receivers.jpg',
+      image: null,
     },
     {
       id: 'pressure-vessels',
@@ -305,7 +334,7 @@ export const products = {
         'Volume': 'Custom designed',
         'Material': 'SA516 Gr 70',
       },
-      image: '/products/pressure-vessels.jpg',
+      image: null,
     },
     {
       id: 'monoblock-pumps',
@@ -321,7 +350,7 @@ export const products = {
         'Head': 'Up to 80 meters',
         'Material': 'Cast iron / SS',
       },
-      image: '/products/monoblock-pumps.jpg',
+      image: null,
     },
     {
       id: 'induction-motors',
@@ -337,7 +366,7 @@ export const products = {
         'Voltage': '415V, 3-Phase',
         'Efficiency': 'IE2 / IE3',
       },
-      image: '/products/motors.jpg',
+      image: null,
     },
     {
       id: 'gensets',
@@ -353,7 +382,7 @@ export const products = {
         'Configuration': 'Open / Silent',
         'Control': 'Auto start / Manual',
       },
-      image: '/products/gensets.jpg',
+      image: null,
     },
     {
       id: 'co2-extraction',
@@ -369,7 +398,7 @@ export const products = {
         'Capacity': 'Custom designed',
         'Control': 'PLC automated',
       },
-      image: '/products/co2-extraction.jpg',
+      image: null,
     },
     {
       id: 'cold-storage-automation',
@@ -385,7 +414,7 @@ export const products = {
         'Alarms': 'SMS / Email alerts',
         'Integration': 'ERP compatible',
       },
-      image: '/products/automation.jpg',
+      image: null,
     },
     {
       id: 'conveyor-systems',
@@ -401,7 +430,7 @@ export const products = {
         'Speed': 'Variable',
         'Temperature': 'Down to -40°C',
       },
-      image: '/products/conveyors.jpg',
+      image: null,
     },
     {
       id: 'fire-safety',
@@ -417,7 +446,7 @@ export const products = {
         'Standards': 'NFPA compliant',
         'Control': 'Addressable panel',
       },
-      image: '/products/fire-safety.jpg',
+      image: null,
     },
     {
       id: 'air-curtains',
@@ -433,7 +462,7 @@ export const products = {
         'Type': 'Ambient / Heated',
         'Mounting': 'Horizontal / Vertical',
       },
-      image: '/products/air-curtains.jpg',
+      image: null,
     },
     {
       id: 'cold-storage-doors',
@@ -449,7 +478,7 @@ export const products = {
         'Type': 'Sliding / Hinged / Strip',
         'Temperature': 'Down to -40°C',
       },
-      image: '/products/doors.jpg',
+      image: null,
     },
     {
       id: 'thermometers',
@@ -465,7 +494,7 @@ export const products = {
         'Accuracy': '±0.5°C',
         'Display': 'LED / LCD',
       },
-      image: '/products/thermometers.jpg',
+      image: null,
     },
     {
       id: 'pressure-gauges',
@@ -481,7 +510,7 @@ export const products = {
         'Connection': 'Bottom / Back mount',
         'Material': 'SS / Brass',
       },
-      image: '/products/pressure-gauges.jpg',
+      image: null,
     },
     {
       id: 'spare-parts',
@@ -497,7 +526,7 @@ export const products = {
         'Coverage': 'All equipment types',
         'Warranty': 'As per manufacturer',
       },
-      image: '/products/spare-parts.jpg',
+      image: null,
     },
   ],
 };

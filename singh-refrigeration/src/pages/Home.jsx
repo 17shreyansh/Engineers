@@ -230,39 +230,111 @@ export default function Home() {
           <div className="services-grid">
             <div className="service-card">
               <div className="service-number">01</div>
-              <h3>Cold Storage Design</h3>
-              <p>Custom-engineered cold storage facilities designed for optimal efficiency and capacity</p>
+              <h3>Consultancy Services</h3>
+              <p>Expert consultation for cold storage planning, feasibility studies, and technical guidance</p>
             </div>
             <div className="service-card">
               <div className="service-number">02</div>
-              <h3>System Installation</h3>
-              <p>Professional installation of refrigeration systems, insulation, and automation equipment</p>
+              <h3>Cold Storage Designing</h3>
+              <p>Custom-engineered cold storage facilities designed for optimal efficiency and capacity</p>
             </div>
             <div className="service-card">
               <div className="service-number">03</div>
-              <h3>Insulation Works</h3>
-              <p>Complete thermal insulation solutions for cold rooms, warehouses, and industrial facilities</p>
+              <h3>Legal & Paperwork Services</h3>
+              <p>Complete assistance with documentation, licensing, and regulatory compliance</p>
             </div>
             <div className="service-card">
               <div className="service-number">04</div>
-              <h3>Automation Integration</h3>
-              <p>PLC-based automation systems for temperature control, monitoring, and energy management</p>
+              <h3>Subsidy & NOC Works</h3>
+              <p>Expert assistance in obtaining government subsidies, NOCs, and clearances</p>
             </div>
             <div className="service-card">
               <div className="service-number">05</div>
-              <h3>Maintenance & Support</h3>
-              <p>Preventive maintenance, emergency repairs, and technical support services</p>
+              <h3>Civil Construction</h3>
+              <p>Complete civil construction services for cold storage buildings and infrastructure</p>
             </div>
             <div className="service-card">
               <div className="service-number">06</div>
-              <h3>Turnkey Projects</h3>
-              <p>Complete project execution from concept to commissioning for cold chain infrastructure</p>
+              <h3>PEB (Pre Engineered Building)</h3>
+              <p>Pre-engineered building solutions for rapid construction of cold storage warehouses</p>
+            </div>
+            <div className="service-card">
+              <div className="service-number">07</div>
+              <h3>Machine Installation & Commissioning</h3>
+              <p>Professional installation and commissioning of all refrigeration equipment</p>
+            </div>
+            <div className="service-card">
+              <div className="service-number">08</div>
+              <h3>Cold Storage Insulation Work</h3>
+              <p>Complete thermal insulation solutions for cold rooms, warehouses, and facilities</p>
             </div>
           </div>
           <div className="services-cta">
             <Link to="/services" className="btn-services">
               View All Services →
             </Link>
+          </div>
+        </div>
+      </SectionWrapper>
+
+      {/* Industries Section */}
+      <SectionWrapper>
+        <div className="container">
+          <SectionHeader
+            subtitle="Industries We Serve"
+            title="Trusted Across Multiple Sectors"
+            description="Delivering specialized cold storage and refrigeration solutions to diverse industries"
+            align="center"
+          />
+          <div className="industries-grid">
+            <div className="industry-item">
+              <div className="industry-number">01</div>
+              <h4>Cold Storages (Potato)</h4>
+            </div>
+            <div className="industry-item">
+              <div className="industry-number">02</div>
+              <h4>Cold Storage (Fruits & Vegetables)</h4>
+            </div>
+            <div className="industry-item">
+              <div className="industry-number">03</div>
+              <h4>CA Cold Storage</h4>
+            </div>
+            <div className="industry-item">
+              <div className="industry-number">04</div>
+              <h4>Ice Plants and Chillers</h4>
+            </div>
+            <div className="industry-item">
+              <div className="industry-number">05</div>
+              <h4>Food Processing Industries</h4>
+            </div>
+            <div className="industry-item">
+              <div className="industry-number">06</div>
+              <h4>Beverages Industry</h4>
+            </div>
+            <div className="industry-item">
+              <div className="industry-number">07</div>
+              <h4>Milk Dairy</h4>
+            </div>
+            <div className="industry-item">
+              <div className="industry-number">08</div>
+              <h4>Chemical and Pharmaceutical Industries</h4>
+            </div>
+            <div className="industry-item">
+              <div className="industry-number">09</div>
+              <h4>Agro Based Industries</h4>
+            </div>
+            <div className="industry-item">
+              <div className="industry-number">10</div>
+              <h4>Multi Commodity Stores</h4>
+            </div>
+            <div className="industry-item">
+              <div className="industry-number">11</div>
+              <h4>HVAC Segment</h4>
+            </div>
+            <div className="industry-item">
+              <div className="industry-number">12</div>
+              <h4>Supply Chain System</h4>
+            </div>
           </div>
         </div>
       </SectionWrapper>
