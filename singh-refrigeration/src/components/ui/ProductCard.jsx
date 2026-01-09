@@ -1,32 +1,41 @@
 import { motion } from 'framer-motion';
 import { Package } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import {
+  StyledProductCard,
+  ProductImage,
+  ProductImagePlaceholder,
+  ProductContent,
+  ProductTitle,
+  ProductDescription,
+  GetQuoteButton
+} from './ProductCard.styles';
 
 export default function ProductCard({ product }) {
   return (
-    <motion.div
+    <StyledProductCard
+      as={motion.div}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="product-card"
     >
-      <div className="product-card-image">
+      <ProductImage>
         {product.image ? (
           <img src={product.image} alt={product.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
         ) : (
-          <div className="product-image-placeholder">
-            <Package className="product-icon" size={64} strokeWidth={1.5} />
-          </div>
+          <ProductImagePlaceholder>
+            <Package size={64} strokeWidth={1.5} />
+          </ProductImagePlaceholder>
         )}
-      </div>
-      <div className="product-card-content">
-        <h3 className="product-card-title">{product.name}</h3>
-        <p className="product-card-description">{product.shortDescription}</p>
-        <Link to="/contact" className="btn-get-quote">
+      </ProductImage>
+      <ProductContent>
+        <ProductTitle>{product.name}</ProductTitle>
+        <ProductDescription>{product.shortDescription}</ProductDescription>
+        <GetQuoteButton as={Link} to="/contact">
           Get Quote
-        </Link>
-      </div>
-    </motion.div>
+        </GetQuoteButton>
+      </ProductContent>
+    </StyledProductCard>
   );
 }

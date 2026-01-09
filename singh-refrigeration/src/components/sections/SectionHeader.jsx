@@ -1,9 +1,11 @@
-export default function SectionHeader({ title, subtitle, description, align = 'left' }) {
+import * as S from './SectionWrapper.styles';
+
+export default function SectionHeader({ title, subtitle, description, align = 'left', dark = false }) {
   return (
-    <div className={`section-header align-${align}`}>
-      {subtitle && <div className="section-subtitle">{subtitle}</div>}
-      <h2 className="section-title">{title}</h2>
-      {description && <p className="section-description">{description}</p>}
-    </div>
+    <S.SectionHeader $align={align}>
+      {subtitle && <S.SectionSubtitle $dark={dark}>{subtitle}</S.SectionSubtitle>}
+      <S.SectionTitle>{title}</S.SectionTitle>
+      {description && <S.SectionDescription $dark={dark} $center={align === 'center'}>{description}</S.SectionDescription>}
+    </S.SectionHeader>
   );
 }

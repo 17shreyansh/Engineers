@@ -4,6 +4,17 @@ import SectionWrapper from '../components/sections/SectionWrapper';
 import SectionHeader from '../components/sections/SectionHeader';
 import ProductCard from '../components/ui/ProductCard';
 import { getCategoryBySlug, getProductsByCategory } from '../data/products';
+import {
+  ProductsPage,
+  CategoryHero,
+  CategoryHeroContent,
+  CategoryHeroIcon,
+  CategoryHeroText,
+  CategoryHeroDescription,
+  CategoryHeroMeta,
+  CategoryHeroCount,
+  ProductGrid
+} from './Common.styles';
 
 export default function ProductCategory() {
   const { category } = useParams();
@@ -15,23 +26,23 @@ export default function ProductCategory() {
   }
 
   return (
-    <div className="product-category-page">
-      <div className="category-hero">
+    <ProductsPage>
+      <CategoryHero>
         <div className="container">
-          <div className="category-hero-content">
-            <div className="category-hero-icon">
+          <CategoryHeroContent>
+            <CategoryHeroIcon>
               {category === 'insulation' ? <Layers size={96} /> : <Settings size={96} />}
-            </div>
-            <div className="category-hero-text">
+            </CategoryHeroIcon>
+            <CategoryHeroText>
               <h1>{categoryData.name}</h1>
-              <p className="category-hero-description">{categoryData.description}</p>
-              <div className="category-hero-meta">
-                <span className="category-hero-count">{products.length} Products Available</span>
-              </div>
-            </div>
-          </div>
+              <CategoryHeroDescription>{categoryData.description}</CategoryHeroDescription>
+              <CategoryHeroMeta>
+                <CategoryHeroCount>{products.length} Products Available</CategoryHeroCount>
+              </CategoryHeroMeta>
+            </CategoryHeroText>
+          </CategoryHeroContent>
         </div>
-      </div>
+      </CategoryHero>
 
       <SectionWrapper>
         <div className="container">
@@ -39,13 +50,13 @@ export default function ProductCategory() {
             title="Product Catalogue"
             description={categoryData.technicalOverview}
           />
-          <div className="product-grid">
+          <ProductGrid>
             {products.map(product => (
               <ProductCard key={product.id} product={product} />
             ))}
-          </div>
+          </ProductGrid>
         </div>
       </SectionWrapper>
-    </div>
+    </ProductsPage>
   );
 }

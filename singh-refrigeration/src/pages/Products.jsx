@@ -2,18 +2,19 @@ import SectionWrapper from '../components/sections/SectionWrapper';
 import SectionHeader from '../components/sections/SectionHeader';
 import CategoryCard from '../components/ui/CategoryCard';
 import { productCategories, products } from '../data/products';
+import { ProductsPage as StyledProductsPage, PageHero, PageHeroContent, CategoryGrid } from './Common.styles';
 
 export default function Products() {
   return (
-    <div className="products-page">
-      <div className="page-hero">
+    <StyledProductsPage>
+      <PageHero>
         <div className="container">
-          <div className="page-hero-content">
+          <PageHeroContent>
             <h1>Industrial Products</h1>
             <p>Complete range of insulation materials and refrigeration machinery for cold storage and industrial applications</p>
-          </div>
+          </PageHeroContent>
         </div>
-      </div>
+      </PageHero>
 
       <SectionWrapper>
         <div className="container">
@@ -22,7 +23,7 @@ export default function Products() {
             title="Explore Our Product Range"
             description="Two comprehensive product categories covering all aspects of industrial refrigeration and cold storage infrastructure"
           />
-          <div className="category-grid">
+          <CategoryGrid>
             {productCategories.map(category => (
               <CategoryCard
                 key={category.id}
@@ -30,9 +31,9 @@ export default function Products() {
                 productCount={products[category.slug].length}
               />
             ))}
-          </div>
+          </CategoryGrid>
         </div>
       </SectionWrapper>
-    </div>
+    </StyledProductsPage>
   );
 }

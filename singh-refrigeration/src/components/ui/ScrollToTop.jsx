@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUp } from 'lucide-react';
+import * as S from './ScrollToTop.styles';
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
@@ -24,17 +25,17 @@ export default function ScrollToTop() {
   return (
     <AnimatePresence>
       {isVisible && (
-        <motion.button
+        <S.ScrollButton
+          as={motion.button}
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.8 }}
           onClick={scrollToTop}
-          className="scroll-to-top"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
           <ArrowUp size={24} />
-        </motion.button>
+        </S.ScrollButton>
       )}
     </AnimatePresence>
   );

@@ -1,6 +1,21 @@
 import SectionWrapper from '../components/sections/SectionWrapper';
 import SectionHeader from '../components/sections/SectionHeader';
 import { Link } from 'react-router-dom';
+import {
+  ServicesPage as StyledServicesPage,
+  PageHero,
+  PageHeroContent,
+  ServicesGrid,
+  ServiceCard,
+  ServiceCardHeader,
+  ServiceNumber,
+  ServiceTitle,
+  ServiceDescription,
+  ServiceFeatures,
+  CTAContent,
+  CTAText,
+  CTAButton
+} from './Services.styles';
 
 export default function Services() {
   const services = [
@@ -73,15 +88,15 @@ export default function Services() {
   ];
 
   return (
-    <div className="services-page">
-      <div className="page-hero">
+    <StyledServicesPage>
+      <PageHero>
         <div className="container">
-          <div className="page-hero-content">
+          <PageHeroContent>
             <h1>Engineering Services</h1>
             <p>Complete solutions for industrial refrigeration and cold storage infrastructure</p>
-          </div>
+          </PageHeroContent>
         </div>
-      </div>
+      </PageHero>
 
       <SectionWrapper>
         <div className="container">
@@ -91,38 +106,38 @@ export default function Services() {
             description="From design to installation, automation to maintenance - we provide end-to-end engineering services"
             align="center"
           />
-          <div className="services-grid-page">
+          <ServicesGrid>
             {services.map(service => (
-              <div key={service.id} className="service-card-detailed">
-                <div className="service-card-header">
-                  <div className="service-number-large">{String(service.id).padStart(2, '0')}</div>
-                  <h3>{service.title}</h3>
-                </div>
-                <p className="service-description">{service.description}</p>
-                <ul className="service-features">
+              <ServiceCard key={service.id}>
+                <ServiceCardHeader>
+                  <ServiceNumber>{String(service.id).padStart(2, '0')}</ServiceNumber>
+                  <ServiceTitle>{service.title}</ServiceTitle>
+                </ServiceCardHeader>
+                <ServiceDescription>{service.description}</ServiceDescription>
+                <ServiceFeatures>
                   {service.features.map((feature, index) => (
-                    <li key={index}>✓ {feature}</li>
+                    <li key={index}>{feature}</li>
                   ))}
-                </ul>
-              </div>
+                </ServiceFeatures>
+              </ServiceCard>
             ))}
-          </div>
+          </ServicesGrid>
         </div>
       </SectionWrapper>
 
       <SectionWrapper variant="accent">
         <div className="container">
-          <div className="cta-content">
-            <div className="cta-text">
+          <CTAContent>
+            <CTAText>
               <h2>Need a Custom Solution?</h2>
               <p>Our engineering team can design and implement solutions tailored to your specific requirements</p>
-            </div>
-            <Link to="/contact" className="btn-cta">
+            </CTAText>
+            <CTAButton as={Link} to="/contact">
               Discuss Your Project
-            </Link>
-          </div>
+            </CTAButton>
+          </CTAContent>
         </div>
       </SectionWrapper>
-    </div>
+    </StyledServicesPage>
   );
 }

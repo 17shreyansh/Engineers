@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { MapPin, Phone, Mail, ChevronDown, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ScrollToTop from '../components/ui/ScrollToTop';
+import * as S from './LayoutShell.styles';
 
 export default function LayoutShell({ children }) {
   const [productsOpen, setProductsOpen] = useState(false);
@@ -12,226 +13,227 @@ export default function LayoutShell({ children }) {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <div className="layout-shell">
-      <header className="header">
-        <div className="header-top">
+    <S.LayoutWrapper>
+      <S.Header>
+        <S.HeaderTop>
           <div className="container">
-            <div className="header-top-content">
-              <div className="company-meta">
+            <S.HeaderTopContent>
+              <S.CompanyMeta>
                 <span><MapPin size={14} style={{display: 'inline', marginRight: '4px'}} /> Agra, India</span>
                 <span><Phone size={14} style={{display: 'inline', marginRight: '4px'}} /> +91-XXXXXXXXXX</span>
                 <span><Mail size={14} style={{display: 'inline', marginRight: '4px'}} /> info@singhrefrigeration.com</span>
-              </div>
-              <div className="header-actions">
+              </S.CompanyMeta>
+              <div>
                 <span>45+ Years of Excellence</span>
               </div>
-            </div>
+            </S.HeaderTopContent>
           </div>
-        </div>
+        </S.HeaderTop>
         
-        <div className="header-main">
+        <S.HeaderMain>
           <div className="container">
-            <div className="header-main-content">
-              <Link to="/" className="logo">
-                <div className="logo-mark">SR&E</div>
-                <div className="logo-text">
-                  <div className="logo-title">Singh Refrigeration & Engineers</div>
-                  <div className="logo-subtitle">Industrial Cold Solutions Since 1978</div>
-                </div>
+            <S.HeaderMainContent>
+              <Link to="/" style={{textDecoration: 'none'}}>
+                <S.Logo>
+                  <S.LogoMark>SR&E</S.LogoMark>
+                  <S.LogoText>
+                    <S.LogoTitle>Singh Refrigeration & Engineers</S.LogoTitle>
+                    <S.LogoSubtitle>Industrial Cold Solutions Since 1978</S.LogoSubtitle>
+                  </S.LogoText>
+                </S.Logo>
               </Link>
 
-              <nav className="nav-main">
-                <Link to="/" className={isActive('/') ? 'nav-link active' : 'nav-link'}>
-                  Home
+              <S.NavMain>
+                <Link to="/" style={{textDecoration: 'none'}}>
+                  <S.NavLink $active={isActive('/')}>Home</S.NavLink>
                 </Link>
-                <Link to="/about" className={isActive('/about') ? 'nav-link active' : 'nav-link'}>
-                  About Us
+                <Link to="/about" style={{textDecoration: 'none'}}>
+                  <S.NavLink $active={isActive('/about')}>About Us</S.NavLink>
                 </Link>
                 
-                <div 
-                  className="nav-dropdown"
+                <S.NavDropdown
                   onMouseEnter={() => setProductsOpen(true)}
                   onMouseLeave={() => setProductsOpen(false)}
                 >
-                  <Link to="/products" className={location.pathname.startsWith('/products') ? 'nav-link active' : 'nav-link'}>
-                    Products
-                    <ChevronDown size={14} className="dropdown-arrow" />
+                  <Link to="/products" style={{textDecoration: 'none'}}>
+                    <S.NavLink $active={location.pathname.startsWith('/products')}>
+                      Products
+                      <S.DropdownArrow><ChevronDown size={14} /></S.DropdownArrow>
+                    </S.NavLink>
                   </Link>
                   
                   <AnimatePresence>
                   {productsOpen && (
-                    <motion.div 
-                      className="mega-menu"
+                    <motion.div
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.2 }}
                     >
-                      <div className="mega-menu-content">
-                        <div className="mega-menu-section">
-                          <div className="mega-menu-header">
-                            <h4>Insulation Products</h4>
-                            <p>Thermal insulation materials for cold storage</p>
-                          </div>
-                          <Link to="/products/insulation" className="mega-menu-link">
-                            View All Insulation Products →
-                          </Link>
-                        </div>
-                        
-                        <div className="mega-menu-section">
-                          <div className="mega-menu-header">
-                            <h4>Machinery & Systems</h4>
-                            <p>Industrial refrigeration equipment & automation</p>
-                          </div>
-                          <Link to="/products/machinery" className="mega-menu-link">
-                            View All Machinery & Systems →
-                          </Link>
-                        </div>
-                      </div>
+                      <S.MegaMenu>
+                        <S.MegaMenuContent>
+                          <S.MegaMenuSection>
+                            <div>
+                              <h4>Insulation Products</h4>
+                              <p>Thermal insulation materials for cold storage</p>
+                            </div>
+                            <Link to="/products/insulation" style={{textDecoration: 'none'}}>
+                              <S.MegaMenuLink>View All Insulation Products →</S.MegaMenuLink>
+                            </Link>
+                          </S.MegaMenuSection>
+                          
+                          <S.MegaMenuSection>
+                            <div>
+                              <h4>Machinery & Systems</h4>
+                              <p>Industrial refrigeration equipment & automation</p>
+                            </div>
+                            <Link to="/products/machinery" style={{textDecoration: 'none'}}>
+                              <S.MegaMenuLink>View All Machinery & Systems →</S.MegaMenuLink>
+                            </Link>
+                          </S.MegaMenuSection>
+                        </S.MegaMenuContent>
+                      </S.MegaMenu>
                     </motion.div>
                   )}
                   </AnimatePresence>
-                </div>
+                </S.NavDropdown>
 
-                <Link to="/services" className={isActive('/services') ? 'nav-link active' : 'nav-link'}>
-                  Services
+                <Link to="/services" style={{textDecoration: 'none'}}>
+                  <S.NavLink $active={isActive('/services')}>Services</S.NavLink>
                 </Link>
-                <Link to="/contact" className={isActive('/contact') ? 'nav-link active' : 'nav-link'}>
-                  Contact
+                <Link to="/contact" style={{textDecoration: 'none'}}>
+                  <S.NavLink $active={isActive('/contact')}>Contact</S.NavLink>
                 </Link>
-              </nav>
+              </S.NavMain>
 
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <Link to="/contact" className="btn-primary" style={{ display: mobileMenuOpen ? 'none' : 'inline-block' }}>
-                  Get Quote
+                <Link to="/contact" style={{textDecoration: 'none', display: mobileMenuOpen ? 'none' : 'inline-block'}}>
+                  <S.BtnPrimary as="span">Get Quote</S.BtnPrimary>
                 </Link>
-                <button 
-                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                  style={{ display: 'none', background: 'none', border: 'none', cursor: 'pointer', padding: '0.5rem' }}
-                  className="mobile-menu-btn"
-                >
+                <S.MobileMenuBtn onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
                   {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                </button>
+                </S.MobileMenuBtn>
               </div>
-            </div>
+            </S.HeaderMainContent>
           </div>
-        </div>
-      </header>
+        </S.HeaderMain>
+      </S.Header>
 
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            className="mobile-nav"
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'tween', duration: 0.3 }}
           >
-            <div className="mobile-nav-header">
-              <div className="logo-text">
-                <div className="logo-title">SR&E</div>
-                <div className="logo-subtitle">Menu</div>
-              </div>
-              <button onClick={() => setMobileMenuOpen(false)} style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
-                <X size={32} />
-              </button>
-            </div>
-            
-            <div className="mobile-nav-links">
-              <Link to="/" className={isActive('/') ? 'mobile-nav-link active' : 'mobile-nav-link'} onClick={() => setMobileMenuOpen(false)}>
-                Home
-              </Link>
-              <Link to="/about" className={isActive('/about') ? 'mobile-nav-link active' : 'mobile-nav-link'} onClick={() => setMobileMenuOpen(false)}>
-                About Us
-              </Link>
+            <S.MobileNav>
+              <S.MobileNavHeader>
+                <S.LogoText>
+                  <S.LogoTitle>SR&E</S.LogoTitle>
+                  <S.LogoSubtitle>Menu</S.LogoSubtitle>
+                </S.LogoText>
+                <button onClick={() => setMobileMenuOpen(false)} style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
+                  <X size={32} />
+                </button>
+              </S.MobileNavHeader>
               
-              <div className="mobile-nav-section">
-                <h4>Products</h4>
-                <Link to="/products" className="mobile-nav-sublink" onClick={() => setMobileMenuOpen(false)}>
-                  All Products
+              <S.MobileNavLinks>
+                <Link to="/" style={{textDecoration: 'none'}} onClick={() => setMobileMenuOpen(false)}>
+                  <S.MobileNavLink className={isActive('/') ? 'active' : ''}>Home</S.MobileNavLink>
                 </Link>
-                <Link to="/products/insulation" className="mobile-nav-sublink" onClick={() => setMobileMenuOpen(false)}>
-                  Insulation Products
+                <Link to="/about" style={{textDecoration: 'none'}} onClick={() => setMobileMenuOpen(false)}>
+                  <S.MobileNavLink className={isActive('/about') ? 'active' : ''}>About Us</S.MobileNavLink>
                 </Link>
-                <Link to="/products/machinery" className="mobile-nav-sublink" onClick={() => setMobileMenuOpen(false)}>
-                  Machinery & Systems
+                
+                <S.MobileNavSection>
+                  <h4>Products</h4>
+                  <Link to="/products" style={{textDecoration: 'none'}} onClick={() => setMobileMenuOpen(false)}>
+                    <S.MobileNavSublink>All Products</S.MobileNavSublink>
+                  </Link>
+                  <Link to="/products/insulation" style={{textDecoration: 'none'}} onClick={() => setMobileMenuOpen(false)}>
+                    <S.MobileNavSublink>Insulation Products</S.MobileNavSublink>
+                  </Link>
+                  <Link to="/products/machinery" style={{textDecoration: 'none'}} onClick={() => setMobileMenuOpen(false)}>
+                    <S.MobileNavSublink>Machinery & Systems</S.MobileNavSublink>
+                  </Link>
+                </S.MobileNavSection>
+                
+                <Link to="/services" style={{textDecoration: 'none'}} onClick={() => setMobileMenuOpen(false)}>
+                  <S.MobileNavLink className={isActive('/services') ? 'active' : ''}>Services</S.MobileNavLink>
                 </Link>
-              </div>
-              
-              <Link to="/services" className={isActive('/services') ? 'mobile-nav-link active' : 'mobile-nav-link'} onClick={() => setMobileMenuOpen(false)}>
-                Services
-              </Link>
-              <Link to="/contact" className={isActive('/contact') ? 'mobile-nav-link active' : 'mobile-nav-link'} onClick={() => setMobileMenuOpen(false)}>
-                Contact
-              </Link>
-              
-              <Link to="/contact" className="btn-primary" style={{ marginTop: '2rem', textAlign: 'center' }} onClick={() => setMobileMenuOpen(false)}>
-                Get Quote
-              </Link>
-            </div>
+                <Link to="/contact" style={{textDecoration: 'none'}} onClick={() => setMobileMenuOpen(false)}>
+                  <S.MobileNavLink className={isActive('/contact') ? 'active' : ''}>Contact</S.MobileNavLink>
+                </Link>
+                
+                <Link to="/contact" style={{textDecoration: 'none', marginTop: '2rem', textAlign: 'center'}} onClick={() => setMobileMenuOpen(false)}>
+                  <S.BtnPrimary as="span" style={{width: '100%', display: 'block'}}>Get Quote</S.BtnPrimary>
+                </Link>
+              </S.MobileNavLinks>
+            </S.MobileNav>
           </motion.div>
         )}
       </AnimatePresence>
 
-      <main className="main-content">
+      <S.MainContent>
         {children}
-      </main>
+      </S.MainContent>
 
       <ScrollToTop />
 
-      <footer className="footer">
-        <div className="footer-main">
+      <S.Footer>
+        <S.FooterMain>
           <div className="container">
-            <div className="footer-grid">
-              <div className="footer-col">
-                <div className="footer-brand">
-                  <div className="footer-logo">SR&E</div>
+            <S.FooterGrid>
+              <S.FooterCol>
+                <S.FooterBrand>
+                  <S.FooterLogo>SR&E</S.FooterLogo>
                   <h3>Singh Refrigeration & Engineers</h3>
                   <p>Leading provider of industrial refrigeration solutions, cold storage systems, and insulation products for over 45 years.</p>
-                </div>
-              </div>
+                </S.FooterBrand>
+              </S.FooterCol>
 
-              <div className="footer-col">
+              <S.FooterCol>
                 <h4>Products</h4>
                 <ul>
                   <li><Link to="/products/insulation">Insulation Products</Link></li>
                   <li><Link to="/products/machinery">Machinery & Systems</Link></li>
                   <li><Link to="/products">All Products</Link></li>
                 </ul>
-              </div>
+              </S.FooterCol>
 
-              <div className="footer-col">
+              <S.FooterCol>
                 <h4>Company</h4>
                 <ul>
                   <li><Link to="/about">About Us</Link></li>
                   <li><Link to="/services">Services</Link></li>
                   <li><Link to="/contact">Contact</Link></li>
                 </ul>
-              </div>
+              </S.FooterCol>
 
-              <div className="footer-col">
+              <S.FooterCol>
                 <h4>Contact</h4>
                 <ul>
                   <li>Agra, Uttar Pradesh, India</li>
                   <li>Phone: +91-XXXXXXXXXX</li>
                   <li>Email: info@singhrefrigeration.com</li>
                 </ul>
-              </div>
-            </div>
+              </S.FooterCol>
+            </S.FooterGrid>
           </div>
-        </div>
+        </S.FooterMain>
 
-        <div className="footer-bottom">
+        <S.FooterBottom>
           <div className="container">
-            <div className="footer-bottom-content">
+            <S.FooterBottomContent>
               <p>&copy; {new Date().getFullYear()} Singh Refrigeration & Engineers. All rights reserved.</p>
-              <p className="footer-credit">
-                Crafted with 💙 by <a href="https://affobe.com/" target="_blank" rel="noopener noreferrer" className="affobe-link">AFFOBE</a>
-              </p>
-            </div>
+              <S.FooterCredit>
+                Crafted with 💙 by <S.AffobeLink href="https://affobe.com/" target="_blank" rel="noopener noreferrer">AFFOBE</S.AffobeLink>
+              </S.FooterCredit>
+            </S.FooterBottomContent>
           </div>
-        </div>
-      </footer>
-    </div>
+        </S.FooterBottom>
+      </S.Footer>
+    </S.LayoutWrapper>
   );
 }

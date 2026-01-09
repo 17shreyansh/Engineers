@@ -1,7 +1,9 @@
+import * as S from './SectionWrapper.styles';
+
 export default function SectionWrapper({ children, variant = 'default', className = '' }) {
   return (
-    <section className={`section-wrapper section-${variant} ${className}`}>
+    <S.SectionWrapper $variant={variant} className={className}>
       {children}
-    </section>
+    </S.SectionWrapper>
   );
 }
