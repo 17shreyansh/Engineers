@@ -107,6 +107,11 @@ export const HeroBadge = styled.div`
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    font-size: 0.75rem;
+    padding: 0.4rem 1rem;
+  }
 `;
 
 export const HeroTitle = styled.h1`
@@ -127,6 +132,10 @@ export const HeroDescription = styled.p`
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 2.5rem;
   max-width: 700px;
+
+  @media (max-width: 768px) {
+    font-size: 0.95rem;
+  }
 `;
 
 export const HeroActions = styled.div`
@@ -236,4 +245,8 @@ export const HeroStatLabel = styled.div`
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: rgba(255, 255, 255, 0.7);
+
+  @media (max-width: 768px) {
+    font-size: 0.75rem;
+  }
 `;

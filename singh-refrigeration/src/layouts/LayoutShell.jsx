@@ -188,7 +188,9 @@ export default function LayoutShell({ children }) {
             <S.FooterGrid>
               <S.FooterCol>
                 <S.FooterBrand>
-                  <S.FooterLogo>SR&E</S.FooterLogo>
+                  <S.FooterLogo>
+                    <img src={logo} alt="Singh Refrigeration & Engineers" style={{height: '50px', width: 'auto',}} />
+                  </S.FooterLogo>
                   <h3>Singh Refrigeration & Engineers</h3>
                   <p>Leading provider of industrial refrigeration solutions, cold storage systems, and insulation products for over 45 years.</p>
                 </S.FooterBrand>

@@ -105,6 +105,10 @@ export const LogoMark = styled.div`
 export const LogoText = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const LogoTitle = styled.div`
