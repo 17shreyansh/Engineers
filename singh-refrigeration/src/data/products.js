@@ -17,6 +17,7 @@ export const productCategories = [
 
 import fiberglassRolls from '../assets/Fiberglass Rolls.jpeg';
 import rockwoolInsulation from '../assets/Rockwool Insulation.jpeg';
+import rockwoolRoll from '../assets/Rockwool roll.jpeg';
 import pufPanel from '../assets/PUF Panel.jpeg';
 import nitrileTubes from '../assets/Nitrile Tubes.jpeg';
 import nitrileSheets from '../assets/Nitrile Sheets.jpeg';
@@ -98,6 +99,22 @@ export const products = {
         'Fire Rating': 'Euroclass A1',
       },
       image: rockwoolInsulation,
+    },
+    {
+      id: 'rockwool-rolls',
+      name: 'Rockwool Rolls',
+      slug: 'rockwool-rolls',
+      category: 'insulation',
+      shortDescription: 'Flexible mineral wool rolls for versatile insulation applications',
+      description: 'Flexible rockwool insulation in roll form, combining superior fire resistance with easy installation for pipes, ducts, and irregular surfaces.',
+      applications: ['Pipe wrapping', 'Duct insulation', 'Equipment insulation', 'Acoustic barriers'],
+      specifications: {
+        'Thermal Conductivity': '0.034 - 0.040 W/mK',
+        'Density': '30 - 80 kg/m³',
+        'Roll Width': '600mm - 1200mm',
+        'Temperature Range': '-40°C to +750°C',
+      },
+      image: rockwoolRoll,
     },
     {
       id: 'puf-panels',

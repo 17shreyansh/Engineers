@@ -250,3 +250,34 @@ export const HeroStatLabel = styled.div`
     font-size: 0.75rem;
   }
 `;
+
+export const CertificateContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  @media (max-width: 768px) {
+    margin-top: 2rem;
+    padding-top: 2rem;
+  }
+`;
+
+export const CertificateImage = styled.img`
+  max-width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: ${theme.radius.md};
+  box-shadow: ${theme.shadows.lg};
+
+  @media (max-width: 768px) {
+    max-height: 300px;
+  }
+
+  @media (max-width: 480px) {
+    max-height: 200px;
+  }
+`;

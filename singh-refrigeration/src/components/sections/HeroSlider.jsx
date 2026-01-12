@@ -11,6 +11,7 @@ import img2 from '../../assets/slider/2.jpeg';
 import img3 from '../../assets/slider/3.jpeg';
 import img4 from '../../assets/slider/4.jpeg';
 import img5 from '../../assets/slider/5.jpeg';
+import certificate from '../../assets/certficate.jpeg';
 import * as S from './HeroSlider.styles';
 
 export default function HeroSlider() {
@@ -121,6 +122,9 @@ export default function HeroSlider() {
               <S.HeroStatLabel>Client Satisfaction</S.HeroStatLabel>
             </S.HeroStat>
           </S.HeroStats>
+          <S.CertificateContainer>
+            <S.CertificateImage src={certificate} alt="Certificate" />
+          </S.CertificateContainer>
         </div>
       </S.HeroStatsWrapper>
     </S.HeroSliderSection>

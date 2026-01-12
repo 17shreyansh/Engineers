@@ -22,7 +22,7 @@ export default function ProductCard({ product }) {
     >
       <ProductImage>
         {product.image ? (
-          <img src={product.image} alt={product.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          <img src={product.image} alt={product.name} style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '1rem', background: '#f8f9fa' }} />
         ) : (
           <ProductImagePlaceholder>
             <Package size={64} strokeWidth={1.5} />

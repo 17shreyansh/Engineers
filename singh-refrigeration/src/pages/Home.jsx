@@ -7,7 +7,37 @@ import SectionWrapper from '../components/sections/SectionWrapper';
 import SectionHeader from '../components/sections/SectionHeader';
 import CategoryCard from '../components/ui/CategoryCard';
 import HeroSlider from '../components/sections/HeroSlider';
+import LogoCarousel from '../components/sections/LogoCarousel';
 import { productCategories, products } from '../data/products';
+
+import dealer1 from '../assets/Authorised Dealership/24.jpeg';
+import dealer2 from '../assets/Authorised Dealership/25.jpeg';
+import dealer3 from '../assets/Authorised Dealership/26.jpeg';
+import dealer4 from '../assets/Authorised Dealership/27.jpeg';
+
+import partner1 from '../assets/Channel Partner Slider/1.jpeg';
+import partner2 from '../assets/Channel Partner Slider/2.jpeg';
+import partner3 from '../assets/Channel Partner Slider/3.jpeg';
+import partner4 from '../assets/Channel Partner Slider/4.jpeg';
+import partner5 from '../assets/Channel Partner Slider/5.jpeg';
+import partner6 from '../assets/Channel Partner Slider/6.jpeg';
+import partner7 from '../assets/Channel Partner Slider/7.jpeg';
+import partner8 from '../assets/Channel Partner Slider/8.jpeg';
+import partner9 from '../assets/Channel Partner Slider/9.jpeg';
+import partner10 from '../assets/Channel Partner Slider/10.jpeg';
+import partner11 from '../assets/Channel Partner Slider/11.jpeg';
+import partner12 from '../assets/Channel Partner Slider/12.jpeg';
+import partner13 from '../assets/Channel Partner Slider/13.jpeg';
+import partner14 from '../assets/Channel Partner Slider/14.jpeg';
+import partner15 from '../assets/Channel Partner Slider/15.jpeg';
+import partner16 from '../assets/Channel Partner Slider/16.jpeg';
+import partner17 from '../assets/Channel Partner Slider/17.jpeg';
+import partner18 from '../assets/Channel Partner Slider/18.jpeg';
+import partner19 from '../assets/Channel Partner Slider/19.jpeg';
+import partner20 from '../assets/Channel Partner Slider/20.jpeg';
+import partner21 from '../assets/Channel Partner Slider/21.jpeg';
+import partner22 from '../assets/Channel Partner Slider/22.jpeg';
+import partner23 from '../assets/Channel Partner Slider/23.jpeg';
 import {
   HomePage as StyledHomePage,
   TrustGrid,
@@ -37,6 +67,9 @@ export default function Home() {
   const services = ['Consultancy Services','Cold Storage Designing','Legal & Paperwork Services','Subsidy & NOC Works','Civil Construction','PEB (Pre Engineered Building)','Machine Installation & Commissioning','Cold Storage Insulation Work','Turnkey Projects','All Types of Industrial Refrigeration','Hot and Cold Industrial Insulation'];
   const serviceDescs = ['Expert consultation for cold storage planning, feasibility studies, and technical guidance','Custom-engineered cold storage facilities designed for optimal efficiency and capacity','Complete assistance with documentation, licensing, and regulatory compliance','Expert assistance in obtaining government subsidies, NOCs, and clearances','Complete civil construction services for cold storage buildings and infrastructure','Pre-engineered building solutions for rapid construction of cold storage warehouses','Professional installation and commissioning of all refrigeration equipment','Complete thermal insulation solutions for cold rooms, warehouses, and facilities','Complete end-to-end project execution from concept to commissioning','Comprehensive industrial refrigeration systems for all applications','All types of hot and cold industrial insulation solutions'];
   const industries = ['Cold Storages (Potato)','Cold Storage (Fruits & Vegetables)','CA Cold Storage','Ice Plants and Chillers','Food Processing Industries','Beverages Industry','Milk Dairy','Chemical and Pharmaceutical Industries','Agro Based Industries','Multi Commodity Stores','HVAC Segment','Supply Chain System','Soundproofing Segment','Underdeck Insulation','Textile Industries','Automobile Industries','Refinery','Metro Station'];
+
+  const dealerLogos = [dealer1, dealer2, dealer3, dealer4];
+  const partnerLogos = [partner1, partner2, partner3, partner4, partner5, partner6, partner7, partner8, partner9, partner10, partner11, partner12, partner13, partner14, partner15, partner16, partner17, partner18, partner19, partner20, partner21, partner22, partner23];
 
   return (
     <StyledHomePage>
@@ -133,6 +166,18 @@ export default function Home() {
               </IndustryItem>
             ))}
           </IndustriesGrid>
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper variant="elevated">
+        <div className="container">
+          <LogoCarousel logos={dealerLogos} title="Authorised Dealership" />
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper>
+        <div className="container">
+          <LogoCarousel logos={partnerLogos} title="Channel Partners" />
         </div>
       </SectionWrapper>
 
