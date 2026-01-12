@@ -38,11 +38,11 @@ export default function About() {
             <AboutContent>
               <SectionHeader
                 subtitle="Our Story"
-                title="Engineering Excellence Since 1978"
+                title="Engineering Excellence Since 1980"
               />
               <AboutText>
                 <p>
-                  Singh Refrigeration & Engineers was established in 1978 in Agra, India, with a vision to provide 
+                  Singh Refrigeration & Engineers was established in 1980 in Agra, India, with a vision to provide 
                   comprehensive industrial refrigeration solutions to the growing cold storage and food processing industries.
                 </p>
                 <p>

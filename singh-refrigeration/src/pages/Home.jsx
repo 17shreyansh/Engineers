@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Factory, CheckCircle, Target, Layers, Quote } from 'lucide-react';
+import { Factory, CheckCircle, Target, Layers } from 'lucide-react';
+import dpImage from '../assets/DP.jpeg';
+import amitImage from '../assets/Amit.jpeg';
 import SectionWrapper from '../components/sections/SectionWrapper';
 import SectionHeader from '../components/sections/SectionHeader';
 import CategoryCard from '../components/ui/CategoryCard';
@@ -12,29 +14,9 @@ import {
   TrustItem,
   TrustIcon,
   CategoryGrid,
-  CEOSection,
-  CEOCard,
-  CEOImageWrapper,
-  CEOImagePlaceholder,
-  CEOInitials,
-  CEOBadge,
-  CEOContent,
-  CEOQuoteIcon,
-  CEOQuote,
-  CEOInfo,
-  CEOName,
-  CEOTitle,
-  CEOCredentials,
-  CredentialItem,
-  CredentialDivider,
-  CEOAchievements,
-  AchievementItem,
-  AchievementNumber,
-  AchievementLabel,
   TeamGrid,
   TeamMemberCard,
   TeamMemberImage,
-  TeamInitials,
   TeamMemberName,
   TeamMemberRole,
   TeamMemberDesc,
@@ -100,41 +82,24 @@ export default function Home() {
 
       <SectionWrapper>
         <div className="container">
-          <SectionHeader subtitle="Leadership" title="Meet Our CEO" description="Driving innovation and excellence in industrial refrigeration" align="center" />
-          <CEOSection as={motion.div} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <CEOCard>
-              <CEOImageWrapper>
-                <CEOImagePlaceholder><CEOInitials>SK</CEOInitials></CEOImagePlaceholder>
-                <CEOBadge>CEO & Founder</CEOBadge>
-              </CEOImageWrapper>
-              <CEOContent>
-                <CEOQuoteIcon><Quote size={40} /></CEOQuoteIcon>
-                <CEOQuote>"For over four decades, we've been committed to delivering world-class refrigeration solutions that power India's cold chain infrastructure. Our success is built on engineering excellence, customer trust, and an unwavering commitment to quality."</CEOQuote>
-                <CEOInfo>
-                  <CEOName>Surinder Kumar Singh</CEOName>
-                  <CEOTitle>Chief Executive Officer</CEOTitle>
-                  <CEOCredentials>
-                    <CredentialItem>45+ Years Experience</CredentialItem>
-                    <CredentialDivider>•</CredentialDivider>
-                    <CredentialItem>B.Tech (Mechanical)</CredentialItem>
-                    <CredentialDivider>•</CredentialDivider>
-                    <CredentialItem>Industry Pioneer</CredentialItem>
-                  </CEOCredentials>
-                </CEOInfo>
-                <CEOAchievements>
-                  <AchievementItem><AchievementNumber>1000+</AchievementNumber><AchievementLabel>Projects Led</AchievementLabel></AchievementItem>
-                  <AchievementItem><AchievementNumber>45+</AchievementNumber><AchievementLabel>Years Leadership</AchievementLabel></AchievementItem>
-                  <AchievementItem><AchievementNumber>500+</AchievementNumber><AchievementLabel>Happy Clients</AchievementLabel></AchievementItem>
-                </CEOAchievements>
-              </CEOContent>
-            </CEOCard>
-          </CEOSection>
-          
-          <TeamGrid as={motion.div} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
-            <TeamMemberCard><TeamMemberImage><TeamInitials>RK</TeamInitials></TeamMemberImage><TeamMemberName>Rajesh Kumar</TeamMemberName><TeamMemberRole>Chief Technical Officer</TeamMemberRole><TeamMemberDesc>30+ years in refrigeration systems design and implementation</TeamMemberDesc></TeamMemberCard>
-            <TeamMemberCard><TeamMemberImage><TeamInitials>AS</TeamInitials></TeamMemberImage><TeamMemberName>Amit Sharma</TeamMemberName><TeamMemberRole>Operations Director</TeamMemberRole><TeamMemberDesc>Expert in project management and cold storage solutions</TeamMemberDesc></TeamMemberCard>
-            <TeamMemberCard><TeamMemberImage><TeamInitials>PV</TeamInitials></TeamMemberImage><TeamMemberName>Priya Verma</TeamMemberName><TeamMemberRole>Head of Engineering</TeamMemberRole><TeamMemberDesc>Specialist in thermal insulation and automation systems</TeamMemberDesc></TeamMemberCard>
-            <TeamMemberCard><TeamMemberImage><TeamInitials>VG</TeamInitials></TeamMemberImage><TeamMemberName>Vikram Gupta</TeamMemberName><TeamMemberRole>Business Development</TeamMemberRole><TeamMemberDesc>Building partnerships and expanding cold chain solutions</TeamMemberDesc></TeamMemberCard>
+          <SectionHeader subtitle="Leadership" title="Our Leadership Team" description="Driving innovation and excellence in industrial refrigeration" align="center" />
+          <TeamGrid as={motion.div} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+            <TeamMemberCard>
+              <TeamMemberImage>
+                <img src={dpImage} alt="Er. Shri D.P. Singh" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </TeamMemberImage>
+              <TeamMemberName>Er. Shri D.P. Singh</TeamMemberName>
+              <TeamMemberRole>Chairman</TeamMemberRole>
+              <TeamMemberDesc>50+ years of experience in industrial refrigeration and cold storage solutions</TeamMemberDesc>
+            </TeamMemberCard>
+            <TeamMemberCard>
+              <TeamMemberImage>
+                <img src={amitImage} alt="Shri Amit Singh" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </TeamMemberImage>
+              <TeamMemberName>Shri Amit Singh</TeamMemberName>
+              <TeamMemberRole>Managing Director</TeamMemberRole>
+              <TeamMemberDesc>30+ years of experience in project management and cold storage solutions</TeamMemberDesc>
+            </TeamMemberCard>
           </TeamGrid>
         </div>
       </SectionWrapper>

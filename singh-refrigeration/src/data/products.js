@@ -26,6 +26,7 @@ import bubbleInsulation from '../assets/Bubble Insulation.jpeg';
 import ammoniaCompressors from '../assets/Ammonia Compressors.jpeg';
 import ammoniaCompressors2 from '../assets/Ammonia Compressors2.jpeg';
 import ammoniaValves from '../assets/Ammonia Valves.jpeg';
+import ammoniaControls from '../assets/Ammonia Controls.jpeg';
 import epsBoards from '../assets/EPS boards.jpeg';
 import ammoniaCondensers from '../assets/Ammonia Atmospheric Condensers.jpeg';
 import airCoolingUnit from '../assets/Ammonia Air Cooling unit.jpeg';
@@ -46,6 +47,7 @@ import digitalThermometer from '../assets/Digital thermometer.jpeg';
 import analogueThermometer from '../assets/Analogue Thermometer.jpeg';
 import pressureGauges from '../assets/Pressure gauges.jpeg';
 import sparesParts from '../assets/Spares parts.jpeg';
+import FiberglassBoards from '../assets/Fiberglass Boards.jpeg'
 
 export const products = {
   insulation: [
@@ -63,7 +65,7 @@ export const products = {
         'Temperature Range': '-50°C to +250°C',
         'Fire Rating': 'Class A1 Non-Combustible',
       },
-      image: fiberglassRolls,
+      image: FiberglassBoards,
     },
     {
       id: 'fiberglass-rolls',
@@ -257,7 +259,7 @@ export const products = {
         'Display': 'HMI Touchscreen',
         'Communication': 'Modbus, Ethernet',
       },
-      image: ammoniaCompressors2,
+      image: ammoniaControls,
     },
     {
       id: 'ammonia-condensers',

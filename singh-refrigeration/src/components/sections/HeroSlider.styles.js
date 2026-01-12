@@ -9,6 +9,7 @@ export const HeroSliderSection = styled.section`
 export const HeroSwiper = styled.div`
   width: 100%;
   height: 700px;
+  position: relative;
 
   @media (max-width: 768px) {
     height: 600px;
@@ -26,6 +27,33 @@ export const HeroSwiper = styled.div`
     background: ${theme.colors.accent};
     width: 32px;
     border-radius: 6px;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+
+    &:hover {
+      background: ${theme.colors.accent};
+    }
+
+    &::after {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      width: 40px;
+      height: 40px;
+    }
   }
 `;
 

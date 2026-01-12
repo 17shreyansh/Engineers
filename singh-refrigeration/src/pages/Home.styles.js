@@ -274,13 +274,10 @@ export const AchievementLabel = styled.div`
 
 export const TeamGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: ${theme.spacing.xl};
-  margin-top: ${theme.spacing['3xl']};
-
-  @media (max-width: ${theme.breakpoints.desktop}) {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  grid-template-columns: repeat(2, 1fr);
+  gap: ${theme.spacing['3xl']};
+  max-width: 1200px;
+  margin: 0 auto;
 
   @media (max-width: ${theme.breakpoints.tablet}) {
     grid-template-columns: 1fr;
@@ -290,41 +287,37 @@ export const TeamGrid = styled.div`
 export const TeamMemberCard = styled.div`
   background: ${theme.colors.white};
   border: 2px solid ${theme.colors.border};
-  border-radius: ${theme.radius.sm};
-  padding: ${theme.spacing.xl};
+  border-radius: ${theme.radius.lg};
+  padding: ${theme.spacing['2xl']};
   text-align: center;
   transition: all ${theme.transitions.normal};
   position: relative;
   overflow: hidden;
+  box-shadow: ${theme.shadows.md};
 
   &::before {
     content: '';
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
-    width: 100%;
-    height: 0;
-    background: rgba(166, 180, 58, 0.05);
-    transition: height ${theme.transitions.normal};
+    width: 6px;
+    height: 100%;
+    background: ${theme.colors.accent};
   }
 
   &:hover {
     border-color: ${theme.colors.accent};
-    box-shadow: ${theme.shadows.md};
-    transform: translateY(-4px);
-
-    &::before {
-      height: 100%;
-    }
+    box-shadow: ${theme.shadows.xl};
+    transform: translateY(-8px);
   }
 `;
 
 export const TeamMemberImage = styled.div`
-  width: 120px;
-  height: 120px;
-  margin: 0 auto ${theme.spacing.lg};
+  width: 100%;
+  aspect-ratio: 3/4;
+  margin: 0 auto ${theme.spacing.xl};
   background: ${theme.gradients.light};
-  border-radius: 50%;
+  border-radius: ${theme.radius.lg};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -333,21 +326,9 @@ export const TeamMemberImage = styled.div`
   position: relative;
   overflow: hidden;
 
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: ${theme.gradients.overlayAccent};
-  }
-
   ${TeamMemberCard}:hover & {
     border-color: ${theme.colors.accent};
-    transform: scale(1.05);
-  }
-
-  @media (max-width: ${theme.breakpoints.tablet}) {
-    width: 100px;
-    height: 100px;
+    transform: scale(1.02);
   }
 `;
 
@@ -364,25 +345,25 @@ export const TeamInitials = styled.div`
 `;
 
 export const TeamMemberName = styled.h4`
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: ${theme.colors.primary};
   margin-bottom: ${theme.spacing.sm};
 `;
 
 export const TeamMemberRole = styled.p`
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: ${theme.colors.accent};
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: ${theme.spacing.md};
 `;
 
 export const TeamMemberDesc = styled.p`
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: ${theme.colors.textSecondary};
-  line-height: 1.6;
+  line-height: 1.7;
   margin: 0;
 `;
 

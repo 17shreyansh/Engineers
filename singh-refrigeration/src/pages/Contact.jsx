@@ -35,7 +35,7 @@ export default function Contact() {
           <ContactGrid>
             <ContactInfo>
               <h2>Singh Refrigeration & Engineers</h2>
-              <ContactTagline>Your trusted partner for industrial cold solutions since 1978</ContactTagline>
+              <ContactTagline>Your trusted partner for industrial cold solutions since 1980</ContactTagline>
               <ContactDetails>
                 <ContactItem>
                   <ContactIcon><MapPin size={40} /></ContactIcon>

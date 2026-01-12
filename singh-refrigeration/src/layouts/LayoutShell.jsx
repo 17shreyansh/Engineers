@@ -4,6 +4,7 @@ import { MapPin, Phone, Mail, ChevronDown, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ScrollToTop from '../components/ui/ScrollToTop';
 import * as S from './LayoutShell.styles';
+import logo from '../assets/logo.jpeg';
 
 export default function LayoutShell({ children }) {
   const [productsOpen, setProductsOpen] = useState(false);
@@ -35,10 +36,10 @@ export default function LayoutShell({ children }) {
             <S.HeaderMainContent>
               <Link to="/" style={{textDecoration: 'none'}}>
                 <S.Logo>
-                  <S.LogoMark>SR&E</S.LogoMark>
+                  <img src={logo} alt="Singh Refrigeration & Engineers" style={{height: '60px', width: 'auto'}} />
                   <S.LogoText>
                     <S.LogoTitle>Singh Refrigeration & Engineers</S.LogoTitle>
-                    <S.LogoSubtitle>Industrial Cold Solutions Since 1978</S.LogoSubtitle>
+                    <S.LogoSubtitle>Industrial Cold Solutions Since 1980</S.LogoSubtitle>
                   </S.LogoText>
                 </S.Logo>
               </Link>
