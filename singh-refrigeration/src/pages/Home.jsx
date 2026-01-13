@@ -76,7 +76,6 @@ import {
   ServicesButton,
   IndustriesGrid,
   IndustryItem,
-  IndustryNumber,
   CTAContent,
   CTAText,
   CTAButton
