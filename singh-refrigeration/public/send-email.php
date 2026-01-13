@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
     
-    $to = 'info@singhrefrigerationeng.com';
+    $to = 'info.singhreagra@gmail.com';
     $emailSubject = 'Contact Form: ' . $subject;
     
     $emailBody = "New Contact Form Submission\n\n";
@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $emailBody .= "Subject: $subject\n\n";
     $emailBody .= "Message:\n$message\n";
     
-    $headers = "From: $email\r\n";
+    $headers = "From: noreply@singhrefrigerationeng.com\r\n";
     $headers .= "Reply-To: $email\r\n";
     $headers .= "X-Mailer: PHP/" . phpversion();
     
