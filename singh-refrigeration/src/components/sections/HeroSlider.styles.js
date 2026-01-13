@@ -251,10 +251,7 @@ export const HeroStatLabel = styled.div`
   }
 `;
 
-export const CertificateContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+export const CertificateShowcase = styled.div`
   margin-top: 3rem;
   padding-top: 3rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -265,19 +262,115 @@ export const CertificateContainer = styled.div`
   }
 `;
 
-export const CertificateImage = styled.img`
-  max-width: 100%;
-  height: auto;
-  max-height: 400px;
-  object-fit: contain;
+export const CertificateTitle = styled.h3`
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: ${theme.colors.accent};
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+`;
+
+export const CertificateSubtitle = styled.p`
+  text-align: center;
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2rem;
+  font-weight: 500;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+`;
+
+export const CertificateGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  @media (max-width: 968px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+export const CertificateCard = styled.div`
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: ${theme.radius.md};
-  box-shadow: ${theme.shadows.lg};
+  padding: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: ${theme.shadows.lg};
+    border-color: ${theme.colors.accent};
+  }
+`;
+
+export const CertificateImage = styled.img`
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+  object-fit: contain;
+  border-radius: ${theme.radius.sm};
 
   @media (max-width: 768px) {
     max-height: 300px;
   }
+`;
 
-  @media (max-width: 480px) {
-    max-height: 200px;
+export const Modal = styled.div`
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 2rem;
+`;
+
+export const ModalContent = styled.div`
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+`;
+
+export const CloseButton = styled.button`
+  position: absolute;
+  top: -50px;
+  right: 0;
+  background: ${theme.colors.accent};
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: ${theme.colors.accentDark};
+    transform: rotate(90deg);
   }
+`;
+
+export const ModalImage = styled.img`
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: ${theme.radius.md};
 `;

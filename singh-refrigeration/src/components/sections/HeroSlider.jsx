@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, EffectFade, Navigation } from 'swiper/modules';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
@@ -14,9 +15,19 @@ import img5 from '../../assets/slider/5.jpeg';
 import s1 from '../../assets/slider/s1.jpeg';
 import s2 from '../../assets/slider/s2.jpeg';
 import certificate from '../../assets/certficate.jpeg';
+import certificate2 from '../../assets/certficate2.jpeg';
+import isoCertificate from '../../assets/ISO certificate.jpg';
 import * as S from './HeroSlider.styles';
 
 export default function HeroSlider() {
+  const [selectedCert, setSelectedCert] = useState(null);
+
+  const certificates = [
+    { id: 1, src: certificate, alt: 'Certificate 1' },
+    { id: 2, src: certificate2, alt: 'Certificate 2' },
+    { id: 3, src: isoCertificate, alt: 'ISO Certificate' },
+  ];
+
   const slides = [
     {
       id: 1,
@@ -140,11 +151,30 @@ export default function HeroSlider() {
               <S.HeroStatLabel>Client Satisfaction</S.HeroStatLabel>
             </S.HeroStat>
           </S.HeroStats>
-          <S.CertificateContainer>
-            <S.CertificateImage src={certificate} alt="Certificate" />
-          </S.CertificateContainer>
+          <S.CertificateShowcase>
+            <S.CertificateTitle>Our Certifications</S.CertificateTitle>
+            <S.CertificateSubtitle>An ISO 9001:2015 Certified Company</S.CertificateSubtitle>
+            <S.CertificateGrid>
+              {certificates.map((cert) => (
+                <S.CertificateCard key={cert.id} onClick={() => setSelectedCert(cert)}>
+                  <S.CertificateImage src={cert.src} alt={cert.alt} />
+                </S.CertificateCard>
+              ))}
+            </S.CertificateGrid>
+          </S.CertificateShowcase>
         </div>
       </S.HeroStatsWrapper>
+
+      {selectedCert && (
+        <S.Modal onClick={() => setSelectedCert(null)}>
+          <S.ModalContent onClick={(e) => e.stopPropagation()}>
+            <S.CloseButton onClick={() => setSelectedCert(null)}>
+              <X size={32} />
+            </S.CloseButton>
+            <S.ModalImage src={selectedCert.src} alt={selectedCert.alt} />
+          </S.ModalContent>
+        </S.Modal>
+      )}
     </S.HeroSliderSection>
   );
 }
