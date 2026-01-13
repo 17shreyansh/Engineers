@@ -20,9 +20,9 @@ export default function LayoutShell({ children }) {
           <div className="container">
             <S.HeaderTopContent>
               <S.CompanyMeta>
-                <span><MapPin size={14} style={{display: 'inline', marginRight: '4px'}} /> Agra, India</span>
-                <span><Phone size={14} style={{display: 'inline', marginRight: '4px'}} /> +91-XXXXXXXXXX</span>
-                <span><Mail size={14} style={{display: 'inline', marginRight: '4px'}} /> info@singhrefrigeration.com</span>
+                <span><MapPin size={14} style={{display: 'inline', marginRight: '4px'}} /> Block 1, Unit 6, Cloth Market, Sanjay Place, Agra-02</span>
+                <span><Phone size={14} style={{display: 'inline', marginRight: '4px'}} /> 0562-4099727 | 9536021000</span>
+                <span><Mail size={14} style={{display: 'inline', marginRight: '4px'}} /> info@singhrefrigerationeng.com</span>
               </S.CompanyMeta>
               <div>
                 <span>45+ Years of Excellence</span>
@@ -217,9 +217,11 @@ export default function LayoutShell({ children }) {
               <S.FooterCol>
                 <h4>Contact</h4>
                 <ul>
-                  <li>Agra, Uttar Pradesh, India</li>
-                  <li>Phone: +91-XXXXXXXXXX</li>
-                  <li>Email: info@singhrefrigeration.com</li>
+                  <li>Block 1, Unit no. 6, Cloth Market, Sanjay Place, Agra-02</li>
+                  <li>Phone: 0562-4099727</li>
+                  <li>Mobile: 9536021000 | 9760207854</li>
+                  <li>Email: info@singhrefrigerationeng.com</li>
+                  <li>sales@singhrefrigerationeng.com</li>
                 </ul>
               </S.FooterCol>
             </S.FooterGrid>
@@ -229,10 +231,10 @@ export default function LayoutShell({ children }) {
         <S.FooterBottom>
           <div className="container">
             <S.FooterBottomContent>
-              <p>&copy; {new Date().getFullYear()} Singh Refrigeration & Engineers. All rights reserved.</p>
               <S.FooterCredit>
                 Crafted with 💙 by <S.AffobeLink href="https://affobe.com/" target="_blank" rel="noopener noreferrer">AFFOBE</S.AffobeLink>
               </S.FooterCredit>
+              <p>&copy; {new Date().getFullYear()} Singh Refrigeration & Engineers. All rights reserved.</p>
             </S.FooterBottomContent>
           </div>
         </S.FooterBottom>

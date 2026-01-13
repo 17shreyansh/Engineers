@@ -4,7 +4,7 @@ import { theme } from '../../theme';
 export const ScrollButton = styled.button`
   position: fixed;
   bottom: 2rem;
-  right: 2rem;
+  right: 6rem;
   width: 56px;
   height: 56px;
   background: ${theme.colors.accent};
@@ -26,7 +26,7 @@ export const ScrollButton = styled.button`
 
   @media (max-width: 768px) {
     bottom: 1.5rem;
-    right: 1.5rem;
+    right: 4.5rem;
     width: 48px;
     height: 48px;
   }

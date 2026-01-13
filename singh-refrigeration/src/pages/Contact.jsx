@@ -41,21 +41,23 @@ export default function Contact() {
                   <ContactIcon><MapPin size={40} /></ContactIcon>
                   <ContactItemContent>
                     <h4>Location</h4>
-                    <p>Agra, Uttar Pradesh, India</p>
+                    <p>Block 1, Unit no. 6, Cloth Market, Sanjay Place, Agra-02</p>
                   </ContactItemContent>
                 </ContactItem>
                 <ContactItem>
                   <ContactIcon><Phone size={40} /></ContactIcon>
                   <ContactItemContent>
                     <h4>Phone</h4>
-                    <p>+91-XXXXXXXXXX</p>
+                    <p>0562-4099727</p>
+                    <p>9536021000 | 9760207854</p>
                   </ContactItemContent>
                 </ContactItem>
                 <ContactItem>
                   <ContactIcon><Mail size={40} /></ContactIcon>
                   <ContactItemContent>
                     <h4>Email</h4>
-                    <p>info@singhrefrigeration.com</p>
+                    <p>info@singhrefrigerationeng.com</p>
+                    <p>sales@singhrefrigerationeng.com</p>
                   </ContactItemContent>
                 </ContactItem>
                 <ContactItem>

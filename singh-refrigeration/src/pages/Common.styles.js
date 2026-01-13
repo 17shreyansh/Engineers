@@ -81,34 +81,85 @@ export const ContactItem = styled.div`
   display: flex;
   gap: ${theme.spacing.lg};
   align-items: flex-start;
+  padding: ${theme.spacing.lg};
+  background: ${theme.colors.white};
+  border: 2px solid ${theme.colors.border};
+  border-radius: ${theme.radius.sm};
+  transition: all ${theme.transitions.normal};
+
+  &:hover {
+    border-color: ${theme.colors.accent};
+    box-shadow: ${theme.shadows.md};
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: ${theme.breakpoints.tablet}) {
+    padding: ${theme.spacing.md};
+    gap: ${theme.spacing.md};
+  }
 `;
 
 export const ContactIcon = styled.div`
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${theme.colors.surfaceRaised};
-  border: 2px solid ${theme.colors.border};
+  background: linear-gradient(135deg, ${theme.colors.accent}, ${theme.colors.accentDark});
   border-radius: ${theme.radius.sm};
   flex-shrink: 0;
-  color: ${theme.colors.accent};
+  color: ${theme.colors.white};
+  box-shadow: ${theme.shadows.sm};
+
+  @media (max-width: ${theme.breakpoints.tablet}) {
+    width: 50px;
+    height: 50px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
 `;
 
 export const ContactItemContent = styled.div`
+  flex: 1;
+
   h4 {
-    font-size: 1rem;
+    font-size: 0.875rem;
     margin-bottom: ${theme.spacing.sm};
-    color: ${theme.colors.primary};
+    color: ${theme.colors.accent};
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    font-weight: 700;
   }
 
   p {
-    color: ${theme.colors.textSecondary};
-    line-height: 1.6;
-    margin: 0;
+    color: ${theme.colors.text};
+    line-height: 1.8;
+    margin: 0.25rem 0;
+    font-size: 1rem;
+    font-weight: 500;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  a {
+    color: ${theme.colors.text};
+    text-decoration: none;
+    transition: color ${theme.transitions.normal};
+
+    &:hover {
+      color: ${theme.colors.accent};
+    }
+  }
+
+  @media (max-width: ${theme.breakpoints.tablet}) {
+    p {
+      font-size: 0.875rem;
+    }
   }
 `;
 
