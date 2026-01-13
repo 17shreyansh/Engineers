@@ -49,6 +49,10 @@ import analogueThermometer from '../assets/Analogue Thermometer.jpeg';
 import pressureGauges from '../assets/Pressure gauges.jpeg';
 import sparesParts from '../assets/Spares parts.jpeg';
 import FiberglassBoards from '../assets/Fiberglass Boards.jpeg'
+import acousticBoards from '../assets/Acoustic boards.jpeg';
+import pipeInsulation from '../assets/Pipe insulation.jpeg';
+import ductBoard from '../assets/Duct Board.jpeg';
+import flexibleDucts from '../assets/Flexible Ducts.jpeg';
 
 export const products = {
   insulation: [
@@ -227,6 +231,70 @@ export const products = {
         'Temperature Range': '-50°C to +75°C',
       },
       image: epsBoards,
+    },
+    {
+      id: 'acoustic-boards',
+      name: 'Acoustic Boards',
+      slug: 'acoustic-boards',
+      category: 'insulation',
+      shortDescription: 'Sound absorption boards for noise control in industrial facilities',
+      description: 'High-performance acoustic insulation boards designed to reduce noise levels in cold storage facilities and industrial environments.',
+      applications: ['Noise reduction', 'Compressor rooms', 'Machine rooms', 'Industrial facilities'],
+      specifications: {
+        'Density': '50 - 100 kg/m³',
+        'Sound Absorption': 'NRC 0.85 - 0.95',
+        'Thickness': '25mm - 100mm',
+        'Fire Rating': 'Class A',
+      },
+      image: acousticBoards,
+    },
+    {
+      id: 'pipe-insulation',
+      name: 'Pipe Insulation',
+      slug: 'pipe-insulation',
+      category: 'insulation',
+      shortDescription: 'Pre-formed pipe insulation for refrigeration and HVAC systems',
+      description: 'Pre-formed elastomeric pipe insulation providing superior thermal efficiency and condensation control for refrigeration piping.',
+      applications: ['Refrigerant lines', 'Chilled water pipes', 'HVAC systems', 'Process piping'],
+      specifications: {
+        'Material': 'Elastomeric foam',
+        'Temperature Range': '-50°C to +105°C',
+        'Thermal Conductivity': '0.034 - 0.040 W/mK',
+        'Pipe Size Range': '6mm - 168mm',
+      },
+      image: pipeInsulation,
+    },
+    {
+      id: 'duct-board',
+      name: 'Duct Board',
+      slug: 'duct-board',
+      category: 'insulation',
+      shortDescription: 'Rigid fiberglass boards for HVAC duct fabrication',
+      description: 'Rigid fiberglass duct boards with integrated vapor barrier for fabricating insulated HVAC ductwork systems.',
+      applications: ['HVAC duct fabrication', 'Air distribution systems', 'Ventilation ducts', 'Clean room ducts'],
+      specifications: {
+        'Density': '48 - 64 kg/m³',
+        'Thermal Conductivity': '0.035 - 0.040 W/mK',
+        'Thickness': '25mm - 50mm',
+        'Facing': 'Aluminum foil vapor barrier',
+      },
+      image: ductBoard,
+    },
+    {
+      id: 'flexible-ducts',
+      name: 'Flexible Ducts',
+      slug: 'flexible-ducts',
+      category: 'insulation',
+      shortDescription: 'Insulated flexible ducting for HVAC air distribution',
+      description: 'Flexible insulated ducts with inner liner and outer jacket for efficient air distribution in HVAC systems.',
+      applications: ['HVAC connections', 'Air distribution', 'Ventilation systems', 'Flexible installations'],
+      specifications: {
+        'Diameter': '100mm - 315mm',
+        'Insulation': 'Fiberglass / Polyester',
+        'Temperature Range': '-30°C to +80°C',
+        'Length': '10m standard rolls',
+      },
+      image: flexibleDucts,
     },
   ],
   machinery: [

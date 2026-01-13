@@ -11,6 +11,8 @@ import img2 from '../../assets/slider/2.jpeg';
 import img3 from '../../assets/slider/3.jpeg';
 import img4 from '../../assets/slider/4.jpeg';
 import img5 from '../../assets/slider/5.jpeg';
+import s1 from '../../assets/slider/s1.jpeg';
+import s2 from '../../assets/slider/s2.jpeg';
 import certificate from '../../assets/certficate.jpeg';
 import * as S from './HeroSlider.styles';
 
@@ -55,6 +57,22 @@ export default function HeroSlider() {
       title: 'Complete Solutions',
       titleAccent: 'End-to-End Support',
       description: 'Comprehensive cold storage solutions from consultation to after-sales service.',
+    },
+    {
+      id: 6,
+      image: s1,
+      badge: 'Innovation',
+      title: 'Advanced Technology',
+      titleAccent: 'Future Ready',
+      description: 'Cutting-edge refrigeration solutions with modern technology and innovation.',
+    },
+    {
+      id: 7,
+      image: s2,
+      badge: 'Excellence',
+      title: 'Superior Quality',
+      titleAccent: 'Proven Performance',
+      description: 'High-performance systems delivering exceptional results and reliability.',
     },
   ];
 
