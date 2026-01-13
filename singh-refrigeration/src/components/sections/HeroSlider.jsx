@@ -47,22 +47,6 @@ export default function HeroSlider() {
     },
     {
       id: 3,
-      image: img3,
-      badge: 'Quality Assured',
-      title: 'Premium Equipment',
-      titleAccent: 'Industry Leading',
-      description: 'State-of-the-art refrigeration equipment and automation systems for optimal performance.',
-    },
-    {
-      id: 4,
-      image: img4,
-      badge: 'Expert Installation',
-      title: 'Professional Service',
-      titleAccent: 'Nationwide Coverage',
-      description: 'Expert installation and maintenance services across India with dedicated support.',
-    },
-    {
-      id: 5,
       image: img5,
       badge: 'Trusted Partner',
       title: 'Complete Solutions',
@@ -70,7 +54,7 @@ export default function HeroSlider() {
       description: 'Comprehensive cold storage solutions from consultation to after-sales service.',
     },
     {
-      id: 6,
+      id: 4,
       image: s1,
       badge: 'Innovation',
       title: 'Advanced Technology',
@@ -78,7 +62,7 @@ export default function HeroSlider() {
       description: 'Cutting-edge refrigeration solutions with modern technology and innovation.',
     },
     {
-      id: 7,
+      id: 5,
       image: s2,
       badge: 'Excellence',
       title: 'Superior Quality',
