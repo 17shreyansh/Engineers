@@ -91,7 +91,7 @@ export default function Contact() {
                   <ContactItemContent>
                     <h4>Phone</h4>
                     <p>0562-4099727</p>
-                    <p>9536021000 | 9760207854</p>
+                    <p>9837774099 | 9760207854</p>
                   </ContactItemContent>
                 </ContactItem>
                 <ContactItem>

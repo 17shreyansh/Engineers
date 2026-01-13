@@ -21,7 +21,7 @@ export default function LayoutShell({ children }) {
             <S.HeaderTopContent>
               <S.CompanyMeta>
                 <span><MapPin size={14} style={{display: 'inline', marginRight: '4px'}} /> Block 1, Unit 6, Cloth Market, Sanjay Place, Agra-02</span>
-                <span><Phone size={14} style={{display: 'inline', marginRight: '4px'}} /> 0562-4099727 | 9536021000</span>
+                <span><Phone size={14} style={{display: 'inline', marginRight: '4px'}} /> 0562-4099727 | 9837774099</span>
                 <span><Mail size={14} style={{display: 'inline', marginRight: '4px'}} /> info@singhrefrigerationeng.com</span>
               </S.CompanyMeta>
               <div>
@@ -219,7 +219,7 @@ export default function LayoutShell({ children }) {
                 <ul>
                   <li>Block 1, Unit no. 6, Cloth Market, Sanjay Place, Agra-02</li>
                   <li>Phone: 0562-4099727</li>
-                  <li>Mobile: 9536021000 | 9760207854</li>
+                  <li>Mobile: 9837774099 | 9760207854</li>
                   <li>Email: info@singhrefrigerationeng.com</li>
                   <li>sales@singhrefrigerationeng.com</li>
                 </ul>
